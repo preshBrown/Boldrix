@@ -1,0 +1,7 @@
+.SecondHeader {
+    padding: 15px 0;
+    background-color: var(--secondheaderbackground-color);
+    backdrop-filter: blur(4px);
+    transition: background-color 0.3s ease-in-out; 
+
+}

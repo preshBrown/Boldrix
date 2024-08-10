@@ -1,0 +1,21 @@
+.FooterTopItem {
+    padding: 10px;
+    margin: 10px;
+}
+.ItemContainer {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    display: flex;
+    align-items: center;
+}
+.ItemIcons {
+    margin-right: 7px;
+    color: var(--foreground-color);
+}
+
+@media (min-width:40rem) {
+    .FooterTopItem {
+        width: 45%;
+    }
+    
+}

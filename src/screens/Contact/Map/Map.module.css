@@ -1,0 +1,21 @@
+.Map {
+  padding-top: 0.5px;
+}
+
+.Map > h3 {
+  text-align: center;
+}
+
+.MapContainer {
+  height: 450px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.MapFrame {
+  /* border-radius: 15px; */
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  border: none;
+}

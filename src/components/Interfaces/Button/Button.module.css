@@ -1,0 +1,102 @@
+a.Button {  
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: 500;
+  padding: 8px 12px;
+  color: blueviolet;
+  cursor: pointer;
+}
+
+a.Button:hover {
+  color: var(--primary-text-color);
+}
+
+a.Danger {
+  color: red;
+}
+
+a.Success {
+  color: gray;
+}
+
+a.StyleDanger {
+  background-color: red;
+  color: var(--primary-text-color);
+  border: 1px solid #ccc;
+}
+
+a.StyleDanger:hover {
+  background-color: white;
+  color: red;
+  border: 1px solid red;
+}
+
+a.StyleSuccess {
+  background-color: black;
+  color: gray;
+  border: 1px solid #ccc;
+}
+
+a.StyleSuccess:hover {
+  background-color: gray;
+  color: var(--primary-text-color);
+  border: 1px solid black;
+}
+
+button.Button {
+  all: unset;
+  display: block;
+  text-align: center;
+  font-weight: 500;
+  /* width: 180px;
+  height: 25px; */
+  padding: 8px 5px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+button.W-100 {
+  width: 100px;
+}
+
+button.W-200 {
+  width: 200px;
+}
+
+button.Button:focus {
+  outline: none;
+}
+button.Button:hover {
+  background-color: var(--specialcontent-background-color);
+  color: black;
+  border: 1px solid black;
+}
+
+button.Button:disabled {
+  border-color: gray;
+  background: #ccc;
+  color: gray;
+  cursor: not-allowed;
+}
+
+button.Button:disabled:hover {
+  border-color: gray;
+  background: #ccc;
+  color: gray;
+  cursor: not-allowed;
+}
+
+button.StyleDanger {
+  background-color: red;
+  color: var(--primary-text-color);
+}
+
+button.StyleDanger:hover {
+  background-color: white;
+  color: red;
+  border: 1px solid red;
+}

@@ -1,0 +1,62 @@
+.CommentCard {
+    padding: 0 12px 0 12px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.Card {
+    margin: 0;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px 50px;
+    background-color: var(--foreground-color);
+    box-shadow: 2px 2px 4px 2px var(--home-shadow-wrapper-color);
+}
+.Card > span {
+    padding: 1px 10px;
+    margin-right: 8px;
+    background-color: rgb(185, 185, 125);
+    border-radius: 20px;
+    color: darkgoldenrod;
+}
+
+.CommentCardProfile {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.CommentCardProfileImg {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.CommentCardProfileImg > img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.CommentCardProfileDetails > h5 {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.CommentCardProfileDetails > h5.Date {
+    font-weight: 300;
+    color: gray;
+}
+
+@media(min-width: 40rem) {
+    .CommentCard {
+        width: 45%;
+    }
+}

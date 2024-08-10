@@ -1,0 +1,87 @@
+.Review {
+  width: 95%;
+  margin: auto;
+  margin-bottom: 8px;
+  max-width: 600px;
+  text-align: left;
+}
+
+.CommentCardProfile {
+  /* width: 80%;
+    margin: auto; */
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.CommentCardProfileImg {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.CommentCardProfileImg > img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.FormWrapper {
+  width: 100%;
+}
+
+.FormContainer {
+  width: 95%;
+  margin: auto;
+  max-width: 600px;
+}
+.textarea {
+  background-color: var(--foreground-color);
+}
+
+.FormContainer > button {
+  all: unset;
+  text-align: center;
+  width: 180px;
+  height: 25px;
+  padding: 5px 3px;
+  margin-top: 13px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+}
+
+.FormContainer > button:focus {
+  outline: none;
+}
+.FormContainer > button:hover {
+  background-color: var(--specialcontent-background-color);
+  color: black;
+}
+
+.FormContainer > button:disabled {
+  border-color: gray;
+  background: #ccc;
+  color: gray;
+  cursor: not-allowed;
+  border-radius: 20px;
+}
+
+.FormContainer > button:disabled:hover {
+  border-color: gray;
+  background: #ccc;
+  color: gray;
+  cursor: not-allowed;
+  border-radius: 20px;
+}
+
+@media (min-width: 40rem) {
+  .Review {
+    width: 80%;
+  }
+
+  .FormContainer {
+    width: 80%;
+  }
+}

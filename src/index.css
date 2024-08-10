@@ -1,0 +1,61 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+[data-theme="light"] { 
+--spinner-color: gray;
+  --home-shadow-wrapper-color: rgba(0, 0, 0, 0.2);
+  --shadow-wrapper-color:rgba(0, 0, 0, 0.6);
+  --dynamic-sidebarbackground-color: rgba(0, 0, 46, 0.1);
+  --firstheaderbackground-color: white;
+  --secondheaderbackground-color: transparent;
+  --brand-color: #00002e;
+  --background-color: rgb(245, 243, 243);
+  --foreground-color: white;
+  --content-color: black;
+  --primary-text-color: black;
+  --footTop-background-color: #ccc;
+  --footbuttom-background-color: rgba(10, 10, 119, 0.5);
+  --specialcontent-background-color:grey;
+  --specialcontent-text-color:white;
+  --text-hover: blueviolet;
+  /* rgba(10, 10, 119, 0.5) */
+}
+
+[data-theme="dark"] {--spinner-color: rgb(10, 10, 119);
+  --home-shadow-wrapper-color: rgba(255, 255, 255, 0.2);
+  --shadow-wrapper-color:rgba(255, 255, 255, 0.2);
+  --dynamic-sidebarbackground-color: rgba(255, 255, 255, 0.1);;
+  --firstheaderbackground-color: rgb(10, 10, 119);
+  --secondheaderbackground-color:  rgba(10, 10, 119, 0.5);
+  --brand-color: white;
+  --background-color: #00002e;
+  --foreground-color: rgb(10, 10, 119);
+  --content-color:  rgb(10, 10, 119);
+  --primary-text-color: white;
+  /* --footTop-background-color:  rgb(114, 114, 209); */
+  --footTop-background-color:  #00002e;
+  --footbuttom-background-color: rgba(138, 43, 226, 0.3);
+  --specialcontent-background-color:white;
+  --specialcontent-text-color:black;
+  --text-hover: blueviolet;
+}
+/* :root {
+  --background-color: white;
+  --foreground-color: rgb(245, 243, 243);
+  --content-color: white;
+  --primary-text-color: #0a0a0a;
+  --footTop-background-color: #ccc;
+  --footbuttom-background-color: rgba(138, 43, 226, 0.3);
+  --specialcontent-background-color:grey;
+} */

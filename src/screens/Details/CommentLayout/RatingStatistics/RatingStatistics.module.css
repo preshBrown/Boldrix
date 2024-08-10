@@ -1,0 +1,20 @@
+.RatingStatistics > div > h2 {
+    text-align: center;
+    margin: 0;
+    }
+.RatingStatistics > div > h5,
+.RatingStatistics > div > small {
+    display: block;
+    width: fit-content;
+    margin: auto;
+}
+
+.Stats {
+    margin: 0 auto;
+    padding: 0;
+    width: fit-content;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}

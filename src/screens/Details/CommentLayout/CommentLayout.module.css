@@ -1,0 +1,70 @@
+.ProductInfoHeader {
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px solid rgba(204, 204, 204, 0.4);
+  }
+  
+  .ProductInfoHeader > h4 {
+    margin: 0;
+    padding: 5px 0;
+    width: fit-content;
+  }
+  
+  .ProductInfo.Open > header > h4 {
+    border-bottom: 0.5px solid red;
+  }
+  .Icon {
+      cursor: pointer;
+      transition: transform 0.3s;
+  }
+  .ProductInfo.Open .Icon {
+      transform: rotate(90deg);
+  }
+  .ProductInfoDescription {
+    text-align: left;
+    height: 0;
+    overflow: hidden;
+  }
+  .ProductInfoDescription h5 {
+    margin: 0;
+  }
+  .ProductInfoDescription > p {
+    margin: 0;
+    padding: 10px;
+  }
+  .ProductInfo.Open > .ProductInfoDescription {
+    height: auto;
+  }
+  
+  /* .ProductInfoDescription > p {
+  margin: 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px 50px;
+  } */
+  
+.CommentNav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.1);
+}
+
+
+.CommentNav > a {
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--primary-text-color);
+}
+
+  a.CommentActive {
+    color:  red;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.3);
+  }

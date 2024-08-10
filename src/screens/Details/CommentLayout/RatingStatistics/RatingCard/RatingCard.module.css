@@ -1,0 +1,27 @@
+.RatingCard {
+    width: fit-content;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.RatingCard > * {
+    margin-right: 8px;
+}
+
+.RatingCard > span {
+    width: 40px;
+}
+.RatingPercent {
+    width: 100px;
+    height: 15px;
+    border-radius: 5px;
+}
+
+.RatingPercent > .gauge {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    background-color:#ffd700 ;
+}

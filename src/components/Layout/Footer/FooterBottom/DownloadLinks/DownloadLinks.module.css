@@ -1,0 +1,19 @@
+.DownloadLinks {
+display: flex;
+justify-content: space-around;
+background-color: transparent;
+align-items: center;
+}
+
+.DownloadLinks a {
+    display: block;
+    border-radius: 15px;
+    width: 145px;
+    height: 45px;
+    text-decoration: none;
+}
+.Img {
+    width: 100%;
+    height: 100%;
+}
+

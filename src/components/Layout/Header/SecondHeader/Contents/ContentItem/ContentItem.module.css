@@ -1,0 +1,21 @@
+.ContentItem {
+    text-align: center;
+    width: 19vw;
+    margin: 0 0.5vw ;
+}
+.ContentItem > button {
+    border: none;
+    background-color: transparent;
+    color: var(--primary-text-color);
+    font: inherit;
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+}
+
+.ContentItem > button:focus {
+    outline: none;
+}
+
+.ContentItem > button:hover {
+    color: blueviolet;
+}

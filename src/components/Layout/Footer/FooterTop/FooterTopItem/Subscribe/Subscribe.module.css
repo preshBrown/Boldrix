@@ -1,0 +1,83 @@
+.Subscribe {
+  margin-bottom: 20px;
+}
+.Subscribe > h1 {
+  text-align: center;
+  font-size: 20px;
+}
+
+.Subscribe > h1 span {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.FormContainer {
+  width: 100%;
+}
+
+.FormWrapper {
+  height: 43px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.CustomInput {
+  display: block;
+  width: calc(100% - 84px);
+  height: 100%;
+  border: none;
+  border-radius: 3px 0 0px 3px;
+  padding: 8px;
+  background-color: white;
+  color: black;
+}
+.CustomInput:focus {
+  outline: none;
+}
+
+.FormWrapper > button {
+  display: block;
+  padding: 8px;
+  border-radius: 0 3px 3px 0;
+  background-color: black;
+  color: white;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  height: 100%;
+}
+
+@media (min-width: 40rem) {
+  .Subscribe {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  .Subscribe > h1 {
+    text-align: left;
+    margin: 0;
+    width: 40%;
+  }
+
+  .FormContainer {
+    width: 55%;
+  }
+}
+@media (min-width: 560px) {
+}
+@media (min-width: 805px) {
+  .Subscribe > h1 {
+    font-size: 25px;
+  }
+}
+@media (min-width: 1015px) {
+  .Subscribe > h1 {
+    font-size: 32px;
+  }
+}

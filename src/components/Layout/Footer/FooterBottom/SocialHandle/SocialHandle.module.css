@@ -1,0 +1,17 @@
+.SocialHandleList {
+    padding: 4px 5px;
+}
+
+.SocialHandleList:hover {
+    background-color: black;
+    border-radius: 50%;
+}
+
+.SocialHandle {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

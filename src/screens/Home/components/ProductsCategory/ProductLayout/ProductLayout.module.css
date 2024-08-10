@@ -1,0 +1,65 @@
+.ProductLayout {
+  padding: 20px 10px;
+}
+
+.ProductLayout > header,
+.ProductLayout > .ViewAll {
+  margin-bottom: 10px;
+}
+.ProductLayoutHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.HeaderIcons {
+  position: relative;
+  width: 60px;
+}
+
+.badgeIcon,
+.beerIcon1 {
+  position: absolute;
+}
+.badgeIcon {
+  top: 13px;
+  z-index: 5;
+  background-color: rgb(245, 243, 243);
+  border-radius: 50%;
+}
+.beerIcon1 {
+  z-index: 4;
+}
+
+.HeaderInfo {
+  width: fit-content;
+  margin-left: 10px;
+}
+
+.itemsContainer {
+  max-width: 1348px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.ViewAll {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 200;
+    color: var(--primary-text-color);
+}
+.ViewAll > span {
+    color: red;
+}
+
+
+@media (min-width: 40rem) {
+  .itemsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

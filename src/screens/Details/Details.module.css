@@ -1,0 +1,89 @@
+.Details {
+  padding: 15px 10px;
+  margin-bottom: 10px;
+}
+.DetailsImgContainer {
+  height: 360;
+  width: 100%;
+  border: none;
+  border-radius: 5px 5px 0 0;
+}
+.DetailsImgContainer > img {
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-radius: 5px 5px 0 0;
+}
+
+.DetailsImgWrapper h4,
+.DetailsImgWrapper h5 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.Rating {
+display: flex;
+margin-bottom: 5px;
+justify-content: start;
+align-items: center;
+}
+.Rating > h2 {
+  margin: 0;
+}
+.Info > small {
+  display: block;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.Info > small.WriteReaview {
+  margin-bottom: 15px;
+}
+
+.Type {
+  margin: 0;
+  margin-bottom: 30px;
+  list-style: none;
+  padding: 0;
+  border-top:  1px solid rgba(204, 204, 204, 0.4);
+  padding-top: 5px;
+
+}
+.Type > li {
+  margin-bottom: 10px;
+}
+
+.Type small {
+font-weight: 300;
+}
+.Type > li > small > span {
+font-weight: bold;
+}
+
+.Info > button {
+  all: unset;
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+/* .Info > button:focus {
+  outline: none;
+} */
+
+@media (min-width: 40rem) {
+  .Details {
+    display: flex;
+    max-width: 839px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .DetailsImgWrapper,
+  .DetailsInfo {
+    width: 49%;
+  }
+  .DetailsInfo {
+padding-left: 50px;  }
+}

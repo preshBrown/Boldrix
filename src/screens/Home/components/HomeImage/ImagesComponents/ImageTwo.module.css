@@ -1,0 +1,135 @@
+.ImageTwo {
+    background: linear-gradient(to top, rgba( 0, 0, 46, 0.6) 10%, transparent), url("../../../../../images/istockphoto-627270032-612x612.jpg");
+    /* background-image: url("../../../../../images/istockphoto-627270032-612x612.jpg")  ; */
+    width: 100%;
+    height: 25vh;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+    flex-grow: 0;
+    background-color: red;
+    transition: translate 400ms ease-in-out;
+}
+
+
+.ImageTwoChild {
+    position: absolute;
+    max-width: 367px;
+    max-height: 123px;
+    top: 30%;
+    left: 3%;
+    bottom: 12%;
+    width: 47%;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .ImageTwoChild > h4 {
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+  }
+  .ImageTwoChild > small {
+    padding: 2px;
+  }
+  .ImageTwoChild > .hide {
+    display: none;
+  }
+  
+  .ImageTwoChild > hr {
+    width: 50%;
+    height: 4px;
+    color: white;
+    background-color: white;
+  }
+  
+  .ImageTwoChild > button {
+    display: block;
+    margin-top: 3px;
+    padding: 3px 5px;
+    color: white;
+    background-color: rgb(10, 10, 119);
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .ImageTwoChild > button:focus {
+    outline: none;
+  }
+  
+  .Open {
+    animation: open-motion 3000ms ease-in-out forwards;
+  }
+  
+  @keyframes open-motion {
+    0% {
+      transform: translateY(30%);
+    }
+    50% {
+      transform: translateY(-10%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+
+
+
+@media (min-width: 340px) {
+    .ImageTwo  {
+        background-position: 0% 10% ;
+    } 
+}
+
+@media (min-width: 514px) { 
+    .ImageTwo  {
+        height: 33vh;
+    }
+}
+
+@media (min-width: 40rem) {
+    .ImageTwoChild {
+      padding-top: 30px;
+      padding-bottom: 2px;
+    }
+    .ImageTwoChild > .hide {
+      display: block;
+    }
+  
+    .Open {
+      animation: open-motion 3000ms ease-in-out forwards;
+  }
+  
+  
+  @keyframes open-motion {
+      0% {
+          transform: translateY(70%);
+      }
+      50% {
+          transform: translateY(-10%);
+      }
+      100% {
+          transform: translateY(0);
+      }
+  }
+  }
+
+
+
+@media (min-width: 800px) {
+    .ImageTwo  {
+        height: 50vh;
+    }
+}
+
+@media (min-width: 927px) {
+    .ImageTwo  { 
+        height: 60vh;
+    }
+}

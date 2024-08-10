@@ -1,0 +1,19 @@
+.PaymentMethodsItem {
+    font: inherit;
+    margin: 0 8px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+.PaymentMethodsItem:focus {
+    outline: none;
+}
+
+.PaymentMethods {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* color:rgb(255, 123, 0); */
+}

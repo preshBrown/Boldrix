@@ -1,0 +1,51 @@
+.FooterBottom {
+    /* background: rgb(245, 243, 243); */
+    background: var(--footbuttom-background-color);
+    padding: 15px 10px 0 10px;
+    text-align: center;
+    color: var(--primary-text-color);
+    transition: background-color 0.3s ease-in-out;
+
+    }
+
+.FooterBottomContainer > section {
+    margin: 20px 0 25px 0;
+    width: 100%;
+}
+
+.LastFooterInfo {
+    border-top: 1px solid rgba(204, 204, 204, 0.5);
+}
+.LastFooterInfo p {
+    font-size: 13px;
+    padding: 7px 0;
+    margin: 0;
+    text-align: center;
+    font-weight:500;
+}
+.LastFooterInfo p > em {
+    color: var(--primary-text-color);
+}
+
+
+@media (min-width: 40rem) {
+    .FooterItemContainer {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .FooterItemContainer > div {
+        width: 47%;
+    }
+
+    .FooterBottomContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+
+
+

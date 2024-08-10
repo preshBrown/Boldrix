@@ -1,0 +1,15 @@
+.NavItem {
+    margin: 0 0.6rem;
+}
+.NavItem  a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+}
+
+a.active {
+    border-bottom: 1px solid red;
+}
+
+.NavItem  a:hover {
+    color: var(--text-hover);
+}
