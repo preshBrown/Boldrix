@@ -1,7 +1,6 @@
 a.Button {  
   display: inline-block;
   text-decoration: none;
-  border-radius: 20px;
   font-weight: 500;
   padding: 8px 12px;
   color: blueviolet;
@@ -44,7 +43,7 @@ a.StyleSuccess:hover {
   border: 1px solid black;
 }
 
-button.Button {
+.ButtonBtn {
   all: unset;
   display: block;
   text-align: center;
@@ -59,43 +58,43 @@ button.Button {
   cursor: pointer;
 }
 
-button.W-100 {
+.ButtonBtn.W-100 {
   width: 100px;
 }
 
-button.W-200 {
+.ButtonBtn.W-200 {
   width: 200px;
 }
 
-button.Button:focus {
+.ButtonBtn:focus {
   outline: none;
 }
-button.Button:hover {
+.ButtonBtn:hover {
   background-color: var(--specialcontent-background-color);
   color: black;
   border: 1px solid black;
 }
 
-button.Button:disabled {
+.ButtonBtn:disabled {
   border-color: gray;
   background: #ccc;
   color: gray;
   cursor: not-allowed;
 }
 
-button.Button:disabled:hover {
+.ButtonBtn:disabled:hover {
   border-color: gray;
   background: #ccc;
   color: gray;
   cursor: not-allowed;
 }
 
-button.StyleDanger {
+.ButtonBtn.StyleDanger {
   background-color: red;
   color: var(--primary-text-color);
 }
 
-button.StyleDanger:hover {
+.ButtonBtn.StyleDanger:hover {
   background-color: white;
   color: red;
   border: 1px solid red;

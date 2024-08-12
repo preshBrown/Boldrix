@@ -64,7 +64,7 @@ const Button = (props) => {
   return (
     <button
       className={[
-        classes.Button,
+        classes.ButtonBtn,
         props.className,
         props.StyleDanger ? classes.StyleDanger : "",
         props["W-100"] ? classes["W-100"] : "",

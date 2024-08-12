@@ -6,7 +6,7 @@ import classes from "./SideDrawer.module.css";
 import Backdrop from "../../../../Interfaces/Backdrop/Backdrop";
 import SideNavItems from "./SideNav/SideNavItems/SideNavItems";
 import SideContents from "./SideContents/SideContents";
-import Logo from "./Boldrix.png"
+import Logo from "./Boldrix.png";
 import { Link } from "react-router-dom";
 import CSSTransition from "react-transition-group/CSSTransition";
 import { useSelector } from "react-redux";
@@ -17,9 +17,7 @@ const animationTiming = {
   exit: 300,
 };
 const SideDrawer = (props) => {
-  const theme = useSelector( state => state.ui.theme)
-
-
+  const theme = useSelector((state) => state.ui.theme);
 
   const sideContent = (
     <CSSTransition
@@ -36,7 +34,9 @@ const SideDrawer = (props) => {
     >
       <aside data-theme={theme} className={classes.SideDrawer}>
         <div className={classes.SideDrawerHeader}>
-        <Link to="/"><img className={classes.BoldrixImg} src={Logo} alt="Boldrix" /></Link>
+          <Link to="/">
+            <img className={classes.BoldrixImg} src={Logo} alt="Boldrix" />
+          </Link>
           <span onClick={props.close}>
             <IoCloseOutline size={20} />
           </span>

@@ -7,17 +7,17 @@ import defaultImg from "./Bespoke-bourbon-cream.jpg";
 import AddToCart from "./AddToCart/AddToCart";
 import { bestPickItems } from "../Home/HomeData";
 
-import classes from "./Details.module.css";
 import { IoGitCompare } from "react-icons/io5";
 import SimilarProduct from "../../components/SimilarProducts/SimilarProducts";
 import ProductInfo from "./ProductInfo/ProductInfo";
 import CommentLayout from "./CommentLayout/CommentLayout";
 import Category from "../../components/Category/Category";
 
-const Details = (props) => {
+import classes from "./Details.module.css";
 
-  const [openComments, setOpenComments] = useState(false)
-  const navigate = useNavigate()
+const Details = (props) => {
+  const [openComments, setOpenComments] = useState(false);
+  const navigate = useNavigate();
 
   const prodId = useParams().prodId;
 
@@ -28,8 +28,8 @@ const Details = (props) => {
   const toggleComments = () => {
     if (!openComments) navigate("comments");
     // if (!openComments) navigate("comments");
-setOpenComments(!openComments)
-  }
+    setOpenComments(!openComments);
+  };
 
   return (
     <>
@@ -115,9 +115,13 @@ setOpenComments(!openComments)
       </section>
 
       <section>
-       <CommentLayout header="Reviews" toggleComments={toggleComments} open={openComments} >
-        <Outlet context={{...props, userComment: false}}/>
-       </CommentLayout>
+        <CommentLayout
+          header="Reviews"
+          toggleComments={toggleComments}
+          open={openComments}
+        >
+          <Outlet context={{ ...props, userComment: false }} />
+        </CommentLayout>
       </section>
 
       <section style={{ marginBottom: "35px" }}>
