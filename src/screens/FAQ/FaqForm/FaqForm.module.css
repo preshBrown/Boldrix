@@ -1,0 +1,62 @@
+
+.FormWrapper {
+    width: 100%;
+  }
+  
+  .FormContainer {
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+    max-width: 480px;
+  }
+  .textarea {
+    background-color: var(--foreground-color);
+  }
+  
+  .FormContainer > button {
+    all: unset;
+    text-align: center;
+    width: 150px;
+    height: 25px;
+    padding: 5px 3px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+  }
+  
+  .FormContainer > button:focus {
+    outline: none;
+  }
+  .FormContainer > button:hover {
+    background-color: var(--specialcontent-background-color);
+    color: black;
+  }
+  
+  .FormContainer > button:disabled {
+    border-color: gray;
+    background: #ccc;
+    color: gray;
+    cursor: not-allowed;
+    border-radius: 20px;
+  }
+  
+  .FormContainer > button:disabled:hover {
+    border-color: gray;
+    background: #ccc;
+    color: gray;
+    cursor: not-allowed;
+    border-radius: 20px;
+  }
+
+  
+
+
+
+  @media (min-width: 40rem) {  
+    .FormContainer {
+      width: calc(100% - 65%);
+      margin-left:15px ;
+      margin-right: 0;
+    }
+  } 

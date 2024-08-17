@@ -1,0 +1,8 @@
+.PolicyCard {
+    padding: 15px;
+    text-align: left;
+}
+
+.PolicyCard > h3{
+color: gray;
+}

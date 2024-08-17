@@ -8,17 +8,24 @@ import Category from "../../components/Category/Category";
 
 import classes from "./Cart.module.css";
 import { IoMdCall } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 
 const Cart = (props) => {
   const [errorModal, setErrorModal] = useState(false);
   const [promt, setPromt] = useState(false);
-
+  const navigate = useNavigate()
+  
   useEffect(() => {
     // setErrorModal(true)
     setPromt(true);
   }, []);
 
+
+  const onProceedToCheckout = () => {
+
+    navigate("/checkout")
+  }
   const cart = (
     <>
       <header className={classes.CartHeader}>
@@ -34,7 +41,7 @@ const Cart = (props) => {
       </section>
       <section className={classes.Checkout}>
         <Button className={classes.BtnCall} to="Tel: 1(009998)"><IoMdCall size={26} /></Button>{" "}
-        <Button className={classes.BtnCheckout}>
+        <Button clicked={onProceedToCheckout} className={classes.BtnCheckout}>
           CHECKOUT (4$ 1,557,900){" "}
         </Button>
       </section>

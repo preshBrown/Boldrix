@@ -1,0 +1,40 @@
+.FormContainer {
+    width: 100%;
+    margin: 18px 0 10px 0;
+  }
+  
+.FormWrapper {
+    height: 43px;
+    border: none;
+    border-radius: 3px;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .CustomInput {
+    display: block;
+    width: calc(100% - 66px);
+    height: 100%;
+    border: 2px solid #ccc;
+    border-radius:  3px;
+    padding: 8px;
+    background-color: var(--foreground-color);
+    color: black;
+  }
+  .CustomInput:focus {
+    outline: none;
+  }
+  
+  .FormWrapper > button {
+    display: block;
+    padding: 10px;    
+    color: gray;
+    border: none;
+    font: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: var(--foreground-color);
+    height: 100%;
+  }

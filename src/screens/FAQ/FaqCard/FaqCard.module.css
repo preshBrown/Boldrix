@@ -1,0 +1,52 @@
+.FaqInfoHeader {
+    padding: 5px 10px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    border-bottom: 0.5px solid rgba(204, 204, 204, 0.4);
+    border-top: 0.5px solid rgba(204, 204, 204, 0.4);
+    cursor: pointer;
+  }
+  
+  .FaqInfoHeader > h4 {
+    margin: 0;
+    padding: 5px 0;
+    width: fit-content;
+  }
+  
+  .FaqInfo.Open > header > h4 {
+    border-bottom: 0.5px solid red;
+  }
+  .Icon {
+      cursor: pointer;
+      margin-right: 15px;
+  }
+  /* .FaqInfo.Open .Icon {
+      transform: rotate(90deg);
+  } */
+
+  .FaqInfoDescription {
+    background-color: var(--foreground-color);
+    text-align: left;
+    height: 0;
+    overflow: hidden;
+  }
+  .FaqInfoDescription h5 {
+    margin: 0;
+  }
+  .FaqInfoDescription > p {
+    margin: 0;
+    padding: 10px;
+  }
+  .FaqInfo.Open > .FaqInfoDescription {
+        padding: 15px;
+    height: auto;
+  }
+  
+  /* .FaqInfoDescription > p {
+  margin: 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px 50px;
+  } */
+  

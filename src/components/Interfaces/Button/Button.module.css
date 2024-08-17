@@ -1,4 +1,4 @@
-a.Button {  
+.Button {  
   display: inline-block;
   text-decoration: none;
   font-weight: 500;
@@ -7,37 +7,37 @@ a.Button {
   cursor: pointer;
 }
 
-a.Button:hover {
+.Button:hover {
   color: var(--primary-text-color);
 }
 
-a.Danger {
+.Button.Danger {
   color: red;
 }
 
-a.Success {
+.Button.Success {
   color: gray;
 }
 
-a.StyleDanger {
+.Button.StyleDanger {
   background-color: red;
   color: var(--primary-text-color);
   border: 1px solid #ccc;
 }
 
-a.StyleDanger:hover {
+.Button.StyleDanger:hover {
   background-color: white;
   color: red;
   border: 1px solid red;
 }
 
-a.StyleSuccess {
+.Button.StyleSuccess {
   background-color: black;
   color: gray;
   border: 1px solid #ccc;
 }
 
-a.StyleSuccess:hover {
+.Button.StyleSuccess:hover {
   background-color: gray;
   color: var(--primary-text-color);
   border: 1px solid black;

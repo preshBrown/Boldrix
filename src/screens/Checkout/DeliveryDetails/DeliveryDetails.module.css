@@ -1,0 +1,164 @@
+.CheckoutPaymentMethod {
+  padding: 0 15px;
+  margin: 20px auto 10px auto;
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.CheckoutPaymentMethodHeader {
+  color: gray;
+}
+.Change {
+  font-weight: 500;
+  padding: 0;
+}
+
+.DeliveryDetails {
+  width: 99%;
+  border-radius: 15px;
+  background-color: var(--foreground-color);
+  margin: auto;
+  padding: 10px 11px;
+}
+
+.PaymentMethod {
+  padding: 0;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.PaymentMethod > span {
+  margin-right: 12px;
+}
+.PaymentMethodContentWrapper > h4 {
+  margin: 0;
+  /* margin-bottom: 5px; */
+}
+
+.DeliveryDetailsItems {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.DeliveryDetailsItem {
+  margin-bottom: 10px;
+}
+
+.DeliveryDetailsItem > h5 {
+  margin: 5px 0;
+  padding: 0;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.DeliveryDetailsItem > h5 > span:last-child {
+  color: gray;
+}
+
+.DeliveryDetailsCard {
+  padding: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.PickUpStation {
+  padding: 0 8px 8px 8px;
+  border-bottom: 1px solid #ccc;
+}
+.PickUpStation > * {
+  margin: 0;
+}
+
+.ItemDescription {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  padding-bottom: 0;
+}
+.ItemDescription h4 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.ItemDescriptionImgWrapper {
+  height: 60px;
+  width: 70px;
+}
+.ItemDescriptionImgWrapper > img {
+  height: 100%;
+  width: 100%;
+}
+
+.ItemDescription small {
+  color: gray;
+}
+
+.ModifyCart {
+  margin: 15px 0;
+  text-align: center;
+} 
+.ModifyCartBtn {
+  padding: 0;
+}
+
+.BackHome {
+  padding: 0 20px;
+  background-color: var(--foreground-color);
+}
+.BackHome span {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+/* .BackHomeIcon {
+    vertical-align: middle;
+} */
+.ConfirmOrder {
+  /* position: fixed;
+  bottom: 0;
+  left: 0; */
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  height: 55px;
+  background-color: var(--foreground-color);
+  padding: 4px 20px;
+}
+
+.ConfirmOrder > button {
+  all: unset;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+
+
+@media (min-width: 40rem) {
+  .DeliveryDetailsItems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .DeliveryDetailsItem {
+    width: 45%;
+  }
+}
+
+@media (min-width: 950px) {
+  .DeliveryDetailsItem {
+    width: 30%;
+  }
+}
+

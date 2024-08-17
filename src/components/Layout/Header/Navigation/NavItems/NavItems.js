@@ -15,7 +15,7 @@ const NavItems = () => {
       <NavItem to="/login">
         <FaUser  />
       </NavItem>
-      <NavItem to="/uuuuu">
+      <NavItem to="/products">
         <CiSearch  size={20} />
       </NavItem>
       <NavItem  style={{position: "relative"}} to="/cart">

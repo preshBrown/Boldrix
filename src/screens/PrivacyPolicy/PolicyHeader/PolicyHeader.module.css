@@ -1,0 +1,69 @@
+
+.PolicyHeader {
+    padding: 1px 15px;
+    margin-bottom: 10px;
+    max-width: 900px;
+}
+.PolicyHeaderContents {
+    text-align: left;
+}
+.PolicyHeaderContents > h2 {
+    font-size: 24px;
+    margin: 16px 0;
+
+}
+.PolicyHeaderNavigations {
+    margin-top: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.GetStartedBtn {
+    margin-right: 20px;
+}
+.LernMoreLink {
+border-radius: 20px;
+border: 1px solid #ccc;
+}
+
+
+.PngWrapper {
+    width: 100%;
+    /* height: 35vh; */
+    max-width: 302px;
+    margin: auto;
+}
+.PngWrapper > img {
+    width: 100%;
+    /* height: 100%; */
+}
+
+
+
+@media(min-width: 40rem) {
+    .PolicyHeader {
+        margin: auto;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+    }
+    .PolicyHeaderContents {
+        margin: auto;
+    }
+
+    .PolicyHeaderContents > h2 {
+        font-size: 35px;
+    }
+
+    .PolicyHeaderWrapper {
+        width: 50%;
+    }
+
+    .Png {
+        width: 50%;
+    }
+    .PngWrapper {
+        max-width: unset;
+        margin: unset;
+    }
+}

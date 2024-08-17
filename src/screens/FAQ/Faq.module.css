@@ -1,0 +1,34 @@
+.FaqHeader {
+  text-align: center;
+  padding: 10px;
+}
+.FaqHeader > * {
+  margin: 0;
+}
+.FaqHeader > h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.FaqHeader > h4 {
+  color: gray;
+  margin-bottom: 8px;
+}
+.ContactBtn {
+  padding: 0;
+}
+
+@media (min-width: 40rem) {
+  .FaqContainer {
+    display: flex;
+    align-items: top;
+  }
+  .FaqHeader {
+    width: 40%;
+  }
+
+  .FaqDescription {
+    width: 60%;
+    padding: 25px;
+  }
+}
