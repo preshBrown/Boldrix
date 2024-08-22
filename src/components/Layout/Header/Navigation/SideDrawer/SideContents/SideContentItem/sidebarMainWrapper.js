@@ -16,6 +16,15 @@ const SidebarMainWrapper = () => {
       console.log(type, id);
       return dispatch(initTheme(id));
     }
+
+    if (type === "Language") {
+     setLan(id)
+    }
+    if (type === "Logout") {
+      console.log("LOGOUT");
+      
+     }
+
   };
 
   return (

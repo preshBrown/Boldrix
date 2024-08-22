@@ -1,0 +1,53 @@
+.AuthModal {
+    position: fixed;
+    top: 5%;
+    right: 50px;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 201;
+    border: 1px solid gray;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+.Mopen {
+    animation: open-modal 400ms ease-out forwards;
+}
+
+.Mclose {
+    animation: close-modal 400ms ease-in forwards;
+}
+
+
+@keyframes open-modal {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(30%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes close-modal {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(30%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}

@@ -5,7 +5,7 @@ import classes from "./NavItem.module.css"
 
 const NavItem = (props) => {
   return (
-    <li className={classes.NavItem}>
+    <li onClick={props.clicked} className={classes.NavItem}>
       <NavLink to={props.to}
       className={navData => navData.isActive ? classes.active : ""}
       >

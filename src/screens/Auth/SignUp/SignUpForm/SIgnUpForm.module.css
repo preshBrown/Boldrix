@@ -1,0 +1,119 @@
+.SignUpFormContainer {
+  padding-top: 35px;
+  margin-bottom: 35px;
+}
+
+.SignUpForm {
+  padding: 0.8rem;
+  background-color: var(--foreground-color);
+  width: 95%;
+  margin: auto;
+  border-radius: 20px;
+}
+
+.form-title__ {
+  text-align: center;
+  color: gray;
+}
+
+#form__wrapper {
+  display: grid;
+  grid-auto-rows: auto;
+  row-gap: 15px;
+}
+
+@media (min-width: 40rem) {
+  #form__wrapper {
+    margin: auto;
+    padding-top: 25px;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas:
+      "fullName img"
+      "email img"
+      "password phone"
+      "confirmpass country"
+      "terms bio"
+      "recaptcha bio" 
+      "button .";
+    row-gap: 15px;
+    column-gap: 30px;
+    /* justify-content: center; */
+    align-items: center;
+  }
+
+  #form__wrapper > .full__Name-Grid {
+    grid-area: fullName;
+    /* background-color: brown; */
+  }
+  #form__wrapper > .Image-Grid {
+    grid-area: img;
+    /* background-color: brown; */
+  }
+
+  #form__wrapper > .email-Grid {
+    grid-area: email;
+    /* background-color: brown; */
+  }
+
+  #form__wrapper > .password-Grid {
+    grid-area: password;
+    /* background-color: brown; */
+  }
+
+  #form__wrapper > .Confirm__password-Grid {
+    grid-area: confirmpass;
+    /* background-color: brown; */
+  }
+
+  #form__wrapper > .contact-Grid {
+    grid-area: phone;
+    /* background-color: brown; */
+  }
+  #form__wrapper > .country-Grid {
+    grid-area: country;
+    /* background-color: brown; */
+  }
+
+  #form__wrapper > .bio-Grid {
+    grid-area: bio;
+    /* background-color: brown; */
+  }
+
+  #form__wrapper > .terms--and__condition-Grid {
+    grid-area: terms;
+    /* background-color: brown; */
+  }
+
+  #form__wrapper > .recaptcha-Grid {
+    grid-area: recaptcha;
+    /* background-color: brown; */
+  }
+
+  #form__wrapper > .button-Grid {
+    grid-area: button;
+    /* background-color: brown; */
+  }
+}
+
+@media (min-width: 850px) {
+  #form__wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1000px;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(8, auto);
+    grid-template-areas:
+      "img img"
+      "img img"
+      "fullName email"
+      "password phone"
+      "confirmpass country"
+      "terms bio"
+      "recaptcha bio" 
+      "button .";
+    row-gap: 15px;
+    column-gap: 30px;
+    align-items: center;
+  }
+}

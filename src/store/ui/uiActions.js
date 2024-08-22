@@ -1,5 +1,5 @@
 import { uiActions } from "./uiSlice";
-const { setTheme, toggleTheme } = uiActions;
+const { setTheme, toggleTheme, openAuthDropdown, closeAuthDropdown } = uiActions;
 
 
 export const initTheme = (theme) => {
@@ -11,5 +11,17 @@ dispatch(setTheme(theme))
 export const toggleMode = () => {
     return (dispatch) => {
 dispatch(toggleTheme())
+    }
+}
+
+export const openAuthUi = () => {
+    return dispatch => {
+        dispatch(openAuthDropdown())
+    }
+}
+
+export const closeAuthUi = () => {
+    return dispatch => {
+        dispatch(closeAuthDropdown())
     }
 }

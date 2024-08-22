@@ -13,7 +13,9 @@
   flex-direction: column;
   z-index: 102;
   transition: background-color 0.3s ease-in-out;
+  outline: none;
 }
+
 
 .SideDrawer::-webkit-scrollbar {
   width: 1vw;

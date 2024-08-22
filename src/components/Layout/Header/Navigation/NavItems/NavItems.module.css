@@ -22,3 +22,12 @@ text-align: center;
 padding: 2px 4px;
 font-size: 12px;
 }
+
+.NavButton {
+    all: unset;
+    margin: 0 0.6rem;
+}
+
+.NavButton:hover {
+    color: var(--text-hover);
+}

@@ -12,7 +12,7 @@ import { MdManageAccounts } from "react-icons/md";
 import { IoIosColorPalette } from "react-icons/io";
 import { CiLight } from "react-icons/ci";
 import { BiSupport } from "react-icons/bi";
-import { AiFillBug } from "react-icons/ai";
+import { AiFillBug, AiOutlineLogout } from "react-icons/ai";
 import { FaLanguage } from "react-icons/fa6";
 
 
@@ -55,7 +55,7 @@ const DataStructureSidebar = [
       {
         title: "FAQ",
         icon: <FaQuestion />,
-        path: "/about",
+        path: "/faq",
       },
     ],
   },
@@ -69,7 +69,7 @@ const DataStructureSidebar = [
       },
       {
         title: "Register",
-        path: "/register",
+        path: "/signup",
       },
       {
         title: "Forgot Password",
@@ -77,7 +77,7 @@ const DataStructureSidebar = [
       },
       {
         title: "Reset Password",
-        path: "/reset-password",
+        path: "/reset-password/reset",
       },
     ],
   },
@@ -117,7 +117,8 @@ const DataStructureSidebar = [
       },
       {
         title: "Logout",
-        path: "/logout",
+        icon: <AiOutlineLogout style={{color: "red"}} size={17} />,
+        type:"Logout"
       },
     ],
   },

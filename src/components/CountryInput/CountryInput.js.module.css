@@ -1,0 +1,16 @@
+.menu-flags {
+    height: 40px;
+    border-radius: 4px;
+    
+}
+
+.menu-flags-button {
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
+    border: 1px solid #ccc;
+}
+.menu-flags-button:focus {
+    outline: none;
+    background-color: rgba(138, 43, 226, 0.3);
+    border-color: blueviolet;
+}

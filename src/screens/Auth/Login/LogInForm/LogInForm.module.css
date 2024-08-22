@@ -1,0 +1,53 @@
+.LogInForm {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: var(--foreground-color);
+  width: 95%;
+  margin: auto;
+  max-width: 640px;
+}
+
+.form-title__ {
+  text-align: center;
+  margin: 0;
+  color: gray;
+}
+
+#form__wrapper {
+  display: grid;
+  grid-auto-rows: auto;
+  row-gap: 15px;
+}
+
+.button-Grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.button-Grid > small {
+  margin-bottom: 5px;
+}
+
+.button-Grid > div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+
+.SignUpBtn {
+  width: 100px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+@media (min-width: 360px) {
+  .button-Grid > div {
+    justify-content: center;
+  }
+  .button-Grid > div > * {
+    margin: 0 20px;
+  }
+}

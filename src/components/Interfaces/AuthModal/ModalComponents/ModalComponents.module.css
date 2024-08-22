@@ -1,0 +1,48 @@
+.ModalComponents {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.authBtn {
+    margin: 10px;
+}
+
+
+
+.authBtn  a {
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    color: var(--primary-text-color);
+    /* color: white; */
+}
+
+.authBtn  a:hover {
+    text-decoration: underline;
+    color: var(--text-hover);
+}
+
+a.active {
+   
+    color:  red;
+}
+
+.LogoutBtn {
+    background-color: transparent;
+    color: var(--primary-text-color);
+    font-weight: bold;
+    border: none;
+
+}
+
+.LogoutBtn:hover {
+    background-color: transparent;
+    color: blueviolet;
+    /* font-weight: bold; */
+    border: none;
+}
