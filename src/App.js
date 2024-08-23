@@ -15,7 +15,7 @@ import { initTheme } from "./store/ui/uiActions";
 import About from "./screens/About/About";
 import Contact from "./screens/Contact/Contact"; 
 import Comments from "./screens/Details/CommentLayout/Comments/Comments";
-import UserComment from "./screens/Details/CommentLayout/UserComment/UserComment";
+import UserComment from "./screens/Details/CommentLayout/UserComment/UserComment"; 
 import Faq from "./screens/FAQ/Faq";
 import Checkout from "./screens/Checkout/Checkout";
 import ProductsStore from "./screens/ProductsStore/ProductsStore";
