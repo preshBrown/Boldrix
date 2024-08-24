@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
 import FaqCard from "./FaqCard/FaqCard";
 import FaqForm from "./FaqForm/FaqForm";
 import {
@@ -15,6 +15,16 @@ import Button from "../../components/Interfaces/Button/Button";
 import Category from "../../components/Category/Category";
 
 const Faq = (props) => {
+const [isDropOpen, setIsDropOpen] = useState("")
+
+
+const limitDropdown = id => {
+  setIsDropOpen(id)
+}
+
+const closeLimitDropdown = () => {
+  setIsDropOpen("")
+}
   return (
     <section className={classes.Faq}>
       <div className={classes.FaqContainer}>
@@ -34,19 +44,53 @@ const Faq = (props) => {
         </article>
 
         <article className={classes.FaqDescription}>
-          <FaqCard header="General" data={general} />
-          <FaqCard header="Ordering" data={ordering} />
-          <FaqCard header="Payment" data={payment} />
-          <FaqCard header="Delivery" data={delivery} />
-          <FaqCard header="Returns" data={returns} />
-          <FaqCard header="Support" data={support} />
+          <FaqCard
+            limitDropdown={limitDropdown}
+            closeLimitDropdown={closeLimitDropdown}
+            isDropOpen={isDropOpen}
+            header="General"
+            id="General"
+            data={general}
+          />
+          <FaqCard 
+          limitDropdown={limitDropdown}
+          closeLimitDropdown={closeLimitDropdown}
+          isDropOpen={isDropOpen}
+          id="Ordering"
+          header="Ordering" data={ordering} />
+
+          <FaqCard
+          limitDropdown={limitDropdown}
+          closeLimitDropdown={closeLimitDropdown}
+          isDropOpen={isDropOpen}
+          id="Payment"
+           header="Payment" data={payment} />
+
+           <FaqCard
+            limitDropdown={limitDropdown}
+            closeLimitDropdown={closeLimitDropdown}
+            isDropOpen={isDropOpen}
+            id="Delivery"
+            header="Delivery" data={delivery} />
+          <FaqCard 
+          limitDropdown={limitDropdown}
+          closeLimitDropdown={closeLimitDropdown}
+          isDropOpen={isDropOpen}
+          id="Returns"
+          header="Returns" data={returns} />
+
+          <FaqCard 
+          limitDropdown={limitDropdown}
+          closeLimitDropdown={closeLimitDropdown}
+          isDropOpen={isDropOpen}
+          id="Support"
+          header="Support" data={support} />
         </article>
-      </div>
 
-      <div style={{ marginBottom: "30px" }}>
-        <FaqForm />
+        <div className={classes.FaqFormGrid}>
+          <FaqForm />
+        </div>
       </div>
-
       <Category />
     </section>
   );

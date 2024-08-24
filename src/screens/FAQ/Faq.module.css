@@ -20,15 +20,34 @@
 
 @media (min-width: 40rem) {
   .FaqContainer {
-    display: flex;
-    align-items: top;
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns:  repeat(2, 50%);
+    grid-template-rows:  200px auto auto;
+    /* grid-template-areas:
+    "head img"
+    "form img"
+    ". 1mg"; */
+    row-gap: 15px;
+    column-gap: 30px;
+   
   }
   .FaqHeader {
-    width: 40%;
+    /* grid-area: head; */
+    grid-column: 1/2;
+    grid-row:1/ 2 ;
   }
 
   .FaqDescription {
-    width: 60%;
-    padding: 25px;
+    /* grid-area: img;    */
+     padding: 25px;
+     grid-column: 2/2;
+     grid-row:1/4;
+  }
+  .FaqFormGrid {
+    grid-column: 1/2;
+    grid-row:2/3 ;
+
   }
 }
