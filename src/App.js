@@ -23,6 +23,8 @@ import TermsAndConditions from "./screens/TermsAndConditions/TermsAndConditions"
 import PrivacyPolicy from "./screens/PrivacyPolicy/PrivacyPolicy";
 import ForgotPassword from "./screens/Auth/ForgotPassword/ForgotPassword";
 import ResetPassword from "./screens/Auth/ResetPassword/ResetPassword";
+import Profile from "./screens/Auth/Profile/Profile";
+import Orders from "./screens/Orders/Orders";
 
 
 function App() {
@@ -53,7 +55,9 @@ function App() {
 
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/orders" element={<Orders />} />
 
+        <Route path="/profile" element={<Profile />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />

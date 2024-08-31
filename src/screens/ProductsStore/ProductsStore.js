@@ -1,8 +1,9 @@
 import React from 'react'
+import Products from './Products/Products'
 
 const ProductsStore = () => {
   return (
-    <div>ProductsStore</div>
+    <div style={{paddingTop: "35px"}}><Products /></div>
   )
 }
 

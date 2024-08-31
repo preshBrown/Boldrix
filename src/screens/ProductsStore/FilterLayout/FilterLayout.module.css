@@ -1,0 +1,11 @@
+.Filter_Layout {
+    width: 100%;
+    max-width: 287.5px;
+    /* font-size: 14px; */
+    }
+
+    @media(min-width:40rem) {
+        .Filter_Layout {
+            width: 25%;
+            }
+    }

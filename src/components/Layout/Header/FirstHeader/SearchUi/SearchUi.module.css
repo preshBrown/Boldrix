@@ -1,10 +1,17 @@
 .SearchUi > input {
     width: 100%;
     /* max-width: 300px; */
-    height: 24px;
+    height: 34px;
     padding: 5px 10px;
+    color: var(--primary-text-color);
     border: 1px solid #ccc;
-    border-radius: 9px;
+    border-radius: 10px;
     background-color: var(--secondheaderbackground-color);
     transition: background-color 0.3s ease-in-out;
 }
+
+.SearchUi > input:focus {
+    outline: none;
+    background-color: rgba(138, 43, 226, 0.3);
+    border-color: blueviolet;
+  }

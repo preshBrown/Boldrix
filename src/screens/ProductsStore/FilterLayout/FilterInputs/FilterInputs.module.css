@@ -1,0 +1,37 @@
+.FilterInputsHeader {
+    text-align: center;
+    color: gray;
+    margin: 0;
+    margin-bottom: 10px;
+}
+.FilterInputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.Form,
+.To {
+    width: 100px;
+    margin-bottom: 10px;
+    display: block;
+    padding: 8px;
+    font-weight: bold;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
+}
+.Form:focus,
+.To:focus {
+    outline: none;
+    background-color: rgba(138, 43, 226, 0.3);
+    border-color: blueviolet;
+}
+
+
+/* .To {
+    margin-left: 15px;
+} */

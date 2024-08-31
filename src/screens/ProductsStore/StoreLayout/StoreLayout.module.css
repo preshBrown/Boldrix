@@ -1,0 +1,25 @@
+
+    
+    .Store_Layout {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        width: 73.5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .OpenFilter {
+        width: 100%;
+    }
+    
+    @media (min-width: 40rem) {
+        /* switch */
+        .Switched {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: start;
+        }
+    }

@@ -1,0 +1,88 @@
+.Modal {
+    position: fixed;
+    width: 90%;
+    top: 11%;
+    left: 5%;
+    background-color: var(--foreground-color);
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    z-index: 200;
+  }
+  
+  .ModalHeader {
+    text-align: center;
+    background-color: black;
+    padding: 10px;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+  }
+  .ModalHeader > h3 {
+    margin: 16px 0;
+    color: white;
+  }
+  .ModalContent {
+    padding: 15px;
+  }
+
+  .ModalFooter {
+    width: 100%;
+  }
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  .Mopen {
+      animation: open-modal 400ms ease-out forwards;
+  }
+  
+  .Mclose {
+      animation: close-modal 400ms ease-in forwards;
+  }
+  
+  
+  @keyframes open-modal {
+      0% {
+          opacity: 0;
+          transform: translateY(-100%);
+      }
+      50% {
+          opacity: 1;
+          transform: translateY(30%);
+      }
+      100% {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+  
+  @keyframes close-modal {
+      0% {
+          opacity: 1;
+          transform: translateY(0);
+      }
+      50% {
+          opacity: 1;
+          transform: translateY(30%);
+      }
+      100% {
+          opacity: 0;
+          transform: translateY(-100%);
+      }
+  }
+  
+  
+  
+  
+  @media (min-width: 600px) {
+    .Modal {
+      width: 500px;
+      left: calc(50% - 250px);
+    }
+  }
+  

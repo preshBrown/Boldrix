@@ -1,0 +1,12 @@
+.Orders {
+    padding-top: 1px; 
+}
+.OrderHeader {
+    padding-top: 1px;
+    text-align: center;
+}
+.OrderHeader > span {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+

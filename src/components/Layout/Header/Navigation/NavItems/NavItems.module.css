@@ -1,33 +1,69 @@
 .NavItems {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 span.TotalCart {
-position: absolute;
-top: 1%;
-right: 1%;
-width: fit-content;
-height: 22px;
-border-radius: 50%;
-border: 1px solid white;
-background-color: var(--background-color);
-color: var(--primary-text-color);
-text-align: center;
-/* padding: 4px 4px; */
-padding: 2px 4px;
-font-size: 12px;
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  width: fit-content;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+  text-align: center;
+  /* padding: 4px 4px; */
+  padding: 2px 4px;
+  font-size: 12px;
 }
 
 .NavButton {
-    all: unset;
-    margin: 0 0.6rem;
+  all: unset;
+  margin: 0 0.6rem;
 }
 
 .NavButton:hover {
-    color: var(--text-hover);
+  color: var(--text-hover);
+}
+
+.SearchWrapper {
+  position: relative;
+}
+.LoadingWrapper {
+  position: absolute;
+  right: 9px;
+  top: 8px;
+}
+
+.SearchListWrapper {
+  position: absolute;
+  top: 50px;
+  height: 200px;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  outline: none;
+}
+
+.SearchListWrapper::-webkit-scrollbar {
+  width: 0.7vh;
+}
+
+.SearchListWrapper::-webkit-scrollbar-thumb {
+  background-color: var(--primary-text-color);
+}
+
+.SearchListWrapper::-webkit-scrollbar-track {
+  background-color: gray;
+}
+@media (min-width: 40rem) {
+  .NavSearch {
+    display: none;
+  }
 }

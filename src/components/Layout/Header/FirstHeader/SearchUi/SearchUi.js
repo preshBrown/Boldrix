@@ -1,21 +1,14 @@
-import React from 'react'
+import React from "react";
 
+import classes from "./SearchUi.module.css";
+import { useNavigate } from "react-router-dom";
 
-import classes from "./SearchUi.module.css"
-
-const SearchUi = () => {
-
-const inputHandler = (e) => {
-  e.preventDefault()
-}
-
-  return (
-    <>
-    <form className={classes.SearchUi} onSubmit={inputHandler}>
-        <input type='search' placeholder="Search..." />
+const SearchUi = (props) => (
+  <>
+    <form className={classes.SearchUi} onSubmit={props.onSubmit}>
+      <input type="search" onChange={props.changed} placeholder="Search..." />
     </form>
-    </>
-  )
-}
+  </>
+);
 
-export default SearchUi
+export default SearchUi;

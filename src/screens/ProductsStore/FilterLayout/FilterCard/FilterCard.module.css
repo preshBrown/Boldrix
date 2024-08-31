@@ -1,0 +1,23 @@
+.FilterCard {
+    width: 100%;
+    padding: 8px;
+    background-color: var(--foreground-color);
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.FilterCard > h4 {
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    color: gray;
+    font-weight: bolder;
+}
+
+.FilterCardItems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+}

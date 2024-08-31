@@ -13,3 +13,7 @@ a.active {
 .NavItem  a:hover {
     color: var(--text-hover);
 }
+/* .FilterModalFooterClass {
+    padding: 0 !important;
+} */
+

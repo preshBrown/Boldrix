@@ -1,0 +1,105 @@
+.Products {
+    padding: 15px;
+}
+
+.Products_Wrapper {
+    width: 100%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.Products_Header,
+.Footer_Header {
+    border-radius: 10px;
+    padding: 8px;
+    background-color: black;
+}
+.Products_Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Filter_Btn:last-of-type {
+    display: none ;
+}
+
+.Filter_Btn {
+    border: none;
+    color: red;
+    font-weight: bold;
+    padding: 0;
+    background-color: transparent;
+}
+.Filter_Btn:hover {
+    border: none;
+    color: white;
+    font-weight: bold;
+    background-color: transparent;
+}
+.Filter_Btn > span {
+    vertical-align: middle;
+}
+
+.FilterLayoutBody {
+    display: none;
+}
+
+.ProductsBody {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    margin: 15px 0;
+}
+
+
+.Footer_Header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pageBtn {
+    margin: 0 10px;
+}
+
+.footerButton {
+    padding: 15px;
+}
+
+.FilterModalContents {
+    height: 35vh;
+      overflow-y: auto;
+      outline: none;
+  }
+  .FilterModalContents::-webkit-scrollbar {
+    width: 0.7vh;
+  }
+  
+   .FilterModalContents::-webkit-scrollbar-thumb {
+    background-color: var(--primary-text-color);
+  }
+
+  
+   .FilterModalContents::-webkit-scrollbar-track {
+    background-color: gray;
+  }
+@media(min-width: 40rem) {
+    .Filter_Btn:last-of-type {
+        display: block;
+    }
+
+    .Filter_Btn:first-child {
+        display: none;
+    } 
+    .MobileFilter {
+        display: none;
+    }
+    .FilterLayoutBody {
+        display: block;
+    }
+}
+
+@media(min-height: 850px) {
+    .FilterModalContents {
+        height: 30vh;}
+}
