@@ -31,7 +31,14 @@ const ProductList = (props) => {
 
             <div className={classes.ProductListContents}>
               <h4>{props.category}</h4>
-              <ReactStars count={5} edit={false} size={24} value="3" activeColor="#ffd700" />
+              <ReactStars
+                count={5}
+                edit={false}
+                size={24}
+                value={props.rating}
+                isHalf={true}
+                activeColor="#ffd700"
+              />
               <h5>{props.rating}</h5>
             </div>
 

@@ -47,7 +47,7 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
         <Route path="/products" element={<ProductsStore />} />
-        <Route path="/products/:prodId" element={<Details />}>
+        <Route path="/products/:prodId" element={<Details />} >
           <Route path="comments" element={<Comments />} />
           <Route path="user-comment" element={<UserComment />} />
         </Route>

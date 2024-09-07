@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { BiSolidPurchaseTag } from "react-icons/bi";
-import { TiMinus, TiPlus } from "react-icons/ti";
+import { FaChevronRight } from "react-icons/fa6";
+import OrderListItem from "../OrderListItem/OrderListItem";
+
 
 import classes from "./OrderCard.module.css";
 
-const Orders = (props) => {
+const OrderCard = (props) => {
   const { limitDropdown, id, closeLimitDropdown, isDropOpen } = props;
   const [open, setOpen] = useState(false);
 
@@ -38,31 +39,34 @@ const Orders = (props) => {
 
   return (
     <>
-      <div className={`${classes.FaqInfo} ${open ? classes.Open : ""}`}>
+      <div className={`${classes.OrderCard} ${open ? classes.Open : ""}`}>
         <header
           onClick={toggleInfo.bind(this)}
-          className={classes.FaqInfoHeader}
+          className={classes.OrderCardHeader}
         >
-          {open ? (
-            <TiMinus className={classes.Icon} size={23} />
-          ) : (
-            <TiPlus className={classes.Icon} size={23} />
-          )}
+
           <h4>{props.header}</h4>{" "}
+          <h4 className={classes.cost}>{props.cost}</h4>{" "}
+          <FaChevronRight
+            className={classes.Icon}
+            onClick={toggleInfo.bind(this)}
+            size={23}
+          />
         </header>
         {open && (
-          <div className={classes.FaqInfoDescription}>
+          <ul className={classes.OrderCardDescription}>
             {props.data.map((data) => (
-              <React.Fragment key={data.id}>
-                <h5>{data.subHeader}</h5>
-                <p>{data.description}</p>
-              </React.Fragment>
+              <OrderListItem 
+               key={data.id}
+                img={data.image1}
+                description={data.brandSummary}
+              />
             ))}
-          </div>
+          </ul>
         )}
       </div>
     </>
   );
 };
 
-export default Orders;
+export default OrderCard;

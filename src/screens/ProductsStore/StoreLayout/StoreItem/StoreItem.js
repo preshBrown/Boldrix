@@ -27,18 +27,19 @@ const StoreItem = (props) => {
         </div>
 
         <div className={classes.ProductListInfo}>
-          <h5>{props.name || "Boldiva"}</h5>
+          <h5>{props.brand}</h5>
           <h5>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis
+            {props.descriptionSummary}
           </h5>
           <ReactStars
             count={5}
             edit={false}
+            isHalf={true}
             size={24}
-            value="3"
+            value={props.rating}
             activeColor="#ffd700"
           />
-          <h5>$ {+props.price}</h5>
+          <h5>$ {props.price}</h5>
         </div>
       </Link>
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { TbListDetails } from "react-icons/tb";
+import { TbListDetails, TbSocial } from "react-icons/tb";
 import { MdDarkMode, MdLocalShipping } from "react-icons/md";
 import { MdContactPhone } from "react-icons/md";
 import { FaArrowTrendUp, FaCircleInfo } from "react-icons/fa6";
@@ -32,8 +32,8 @@ const DataStructureSidebar = [
         path: "/about",
       },
       {
-        title: "Contact",
-        icon: <MdContactPhone />,
+        title: "Socials",
+        icon: <TbSocial />,
         childrens: [
           {
             title: "Facebook",
@@ -77,7 +77,7 @@ const DataStructureSidebar = [
       },
       {
         title: "Reset Password",
-        path: "/reset-password/reset",
+        path: "/forgot-password",
       },
     ],
   },
@@ -128,11 +128,11 @@ const DataStructureSidebar = [
     childrens: [
       {
         title: "Search",
-        path: "/search",
+        path: "/products",
       },
       {
         title: "History",
-        path: "/history",
+        // path: "/history",
       },
     ],
   },
@@ -191,13 +191,13 @@ const DataStructureSidebar = [
   {
     title: "Support",
     icon: <BiSupport />,
-    path: "/support",
+    // path: "/support",
   },
 
   {
     title: "Report Bug",
     icon: <AiFillBug />,
-    path: "/report-bug",
+    // path: "/report-bug",
   },
 ];
 

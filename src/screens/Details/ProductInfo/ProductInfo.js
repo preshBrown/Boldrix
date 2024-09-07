@@ -8,8 +8,7 @@ const ProductInfo = (props) => {
 
   const openInfo = () => {
     setOpen(!open);
-    console.log("🚀 ~ ProductInfo ~ open:", open)
-
+    console.log("🚀 ~ ProductInfo ~ open:", open);
   };
 
   return (
@@ -23,10 +22,17 @@ const ProductInfo = (props) => {
             size={23}
           />
         </header>
-       {open &&  <div className={classes.ProductInfoDescription}>
+        {open && (
+          <div className={classes.ProductInfoDescription}>
             <h5>{props.subHeader}</h5>
-          <p>{props.description}</p>
-        </div>}
+            <p>{props.description}</p>
+            <ol style={{margin: 0, padding: "15px"}}>
+              {props.keyFeatures.map((keyF, index) => (
+                <li key={index}>{keyF}</li>
+              ))}
+            </ol>
+          </div>
+        )}
       </div>
     </>
   );

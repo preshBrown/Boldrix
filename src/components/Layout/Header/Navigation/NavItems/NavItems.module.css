@@ -15,8 +15,8 @@ span.TotalCart {
   height: 22px;
   border-radius: 50%;
   border: 1px solid white;
-  background-color: var(--background-color);
-  color: var(--primary-text-color);
+  background-color: rgb(245, 243, 243);;
+  color: red;
   text-align: center;
   /* padding: 4px 4px; */
   padding: 2px 4px;

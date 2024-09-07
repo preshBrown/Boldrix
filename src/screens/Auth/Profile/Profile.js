@@ -14,7 +14,7 @@ const Profile = () => {
     <section className={classes.Profile}>
       <article className={classes.ProfileDescription}>
         <div className={classes.ProfileImageWrapper}>
-          <img src={Imgs} alt="Profile Image" />
+          <img src={Imgs} alt="Profile" />
         </div>
 
         <h4 className={classes.ProfileUserName}>Victo Marshal</h4>

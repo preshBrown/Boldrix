@@ -5,32 +5,51 @@ import Logo from "./Bespoke-bourbon-cream.jpg";
 import { TiMinus, TiPlus } from "react-icons/ti";
 
 import classes from "./CartCard.module.css";
+import { useDispatch } from "react-redux";
+import {
+  onIncreaseCartItem,
+  onDecreaseCartItem,
+  onRemoveCart,
+} from "../../../store/DetailsAndCart/detailAndCartAction";
 
 const CartCard = (props) => {
   const [quantity, setQuantity] = useState(5);
+  const dispatch = useDispatch();
+
+  const increaseItemQty = (id) => {
+    dispatch(onIncreaseCartItem(id));
+  };
+
+  const decreaseItemQty = (id) => {
+    dispatch(onDecreaseCartItem(id));
+  };
+
+  const removeCart = (id) => {
+    dispatch(onRemoveCart(id));
+  };
 
   return (
     <article className={classes.CartCard}>
       <div className={classes.CardDescriptionContainer}>
         <div className={classes.CartImgContainer}>
-          <img src={Logo} alt="ImgItem" />
+          <img src={props.img} alt="ImgItem" />
         </div>
 
         <div className={classes.description}>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis
-            ratione numquam quia mollitia
-          </p>
+          <p>{props.descriptionSummary}</p>
           <small>
             Variation: <span>ORIGINAL</span>
           </small>
           <h4>$ {props.price}</h4>
-          <small>In Stock</small>
+          <small>{props.avalability}</small>
         </div>
       </div>
 
       <div className={classes.toggle}>
-        <button className={classes.ButtonRemove}>
+        <button
+          onClick={removeCart.bind(null, props.id)}
+          className={classes.ButtonRemove}
+        >
           <span>
             <AiOutlineDelete className={classes.Icon} size={26} />
           </span>
@@ -38,16 +57,16 @@ const CartCard = (props) => {
         </button>
         <div className={classes.toggleButtons}>
           <button
-            disabled={quantity === 1}
+            disabled={props.qty === 1}
             className={classes.toggleButton}
-            onClick={() => setQuantity((prevQ) => prevQ - 1)}
+            onClick={decreaseItemQty.bind(null, props.id)}
           >
             <TiMinus size={26} />
           </button>
-          <span>{quantity}</span>
+          <span>{props.qty}</span>
           <button
             className={classes.toggleButton}
-            onClick={() => setQuantity((prevQ) => prevQ + 1)}
+            onClick={increaseItemQty.bind(null, props.id)}
           >
             <TiPlus size={26} />
           </button>

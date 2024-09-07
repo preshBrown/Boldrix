@@ -1,0 +1,37 @@
+.ListItem {
+    border-radius: 10px;
+    border:1px solid  rgba(204, 204, 204, 0.2);
+    padding: 5px 0;
+    width: 98%;
+    max-width: 40rem;
+    margin: auto;
+    margin-bottom: 8px;
+    background-color: var(--foreground-color);
+    transition: background-color 0.3s ease-in-out;
+
+}
+
+
+
+
+.ItemContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.ImageContainer {
+    height: 50px;
+    width: 50px;
+    margin-right: 15px;
+}
+.ImageContainer > img {
+    height: 100%;
+    width: 100%;
+}
+
+.ListItem:hover {
+    scale: 1.01;
+    border:1px solid  rgba(204, 204, 204, 0.3);
+    box-shadow: var(--home-shadow-wrapper-color);
+}

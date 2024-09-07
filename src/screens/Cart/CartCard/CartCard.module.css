@@ -126,6 +126,14 @@ color: red;
   @media(min-width:40rem) {
     .CartCard {
         width: 45%;
+        margin: 0;
+        margin-bottom: 15px;
+    }
+  }
+
+  @media(min-width:1000px) {
+    .CartCard {
+        width: 32%;
     }
   }
   /* max w 459 */

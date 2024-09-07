@@ -121,6 +121,10 @@ color: red;
 
   .Two {
     width: 48%;
+    /* min-height: 330px;
+    max-height: 381px; */
+    height: 381px;
+    margin-top: 0;
   }
 
   .Two > .StoreItemLink {
@@ -141,10 +145,20 @@ color: red;
 }
 
 }
-
+@media(min-width: 800px) {
+  .Two {
+    /* min-height: 330px;
+    max-height: 381px; */
+    height: 340px;
+    /* margin-top: 0; */
+  }
+}
 @media (min-width: 850px) {
+  
   .Three {
     width: 28%;
+    height: 381px;
+    margin-top: 0;
   }
 
   .Three > .StoreItemLink {
@@ -169,6 +183,8 @@ color: red;
 @media (min-width: 1100px) {
   .Four {
     width: 24%;
+    height: 381px;
+    margin-top: 0;
   }
 
   .Four > .StoreItemLink {

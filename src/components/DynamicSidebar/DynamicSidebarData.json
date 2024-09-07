@@ -14,7 +14,7 @@
                 "path": "/about"
             },
             {
-                "title": "Contact",
+                "title": "Socials",
                 "icon": "bi-phone-fill",
                 "childrens": [
                     {
@@ -55,7 +55,7 @@
             },
             {
                 "title": "Reset Password",
-                "path": "/reset-password"
+                "path": "/forgot-password"
             }
         ]
     },
@@ -105,7 +105,7 @@
         "childrens": [
             {
                 "title": "Search",
-                "path": "/search"
+                "path": "/store"
             },
             {
                 "title": "History",

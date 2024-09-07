@@ -18,6 +18,7 @@ import SearchListItems from "../../FirstHeader/SearchUi/SearchListItems/SearchLi
 
 const NavItems = (props) => {
   const dispatch = useDispatch();
+  const cartQuantitySum = useSelector((state) => state.dc.cart.quantities);
   const authDropdown = useSelector((state) => state.ui.authDropdown);
 
   // useEffect(() => {
@@ -63,7 +64,7 @@ const NavItems = (props) => {
         </button>
         <NavItem style={{ position: "relative" }} to="/cart">
           <TiShoppingCart size={20} />{" "}
-          <span className={classes.TotalCart}>0</span>
+          <span className={classes.TotalCart}>{cartQuantitySum}</span>
         </NavItem>
       </ul>
     </>

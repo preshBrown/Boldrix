@@ -98,6 +98,12 @@
   color: gray;
 }
 
+.ItemDescription h4 {
+font-weight: 400;
+}
+
+
+
 .ModifyCart {
   margin: 15px 0;
   text-align: center;

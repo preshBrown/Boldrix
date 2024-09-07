@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import HomeImage from "./components/HomeImage/HomeImage";
 import ProductCollections from "./components/ProductsCategory/ProductCollections";
 import { useDispatch, useSelector } from "react-redux";
+
 import {
   initBestPicks,
   initRecommended,
@@ -18,6 +19,9 @@ import Category from "../../components/Category/Category";
 import DemoImage from "../../components/DemoImage/DemoImage";
 import Components from "./components/HomeImage/ImagesComponents/Components";
 import HomeLoadingSpinner from "../../components/Interfaces/HomeLoadingSpinner/HomeLoadingSpinner"
+
+
+
 const Home = (props) => {
   const dispatch = useDispatch();
   const bestPicksProducts = useSelector(

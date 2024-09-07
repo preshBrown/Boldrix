@@ -1,9 +1,11 @@
 .Orders {
     padding-top: 1px; 
+    margin-bottom: 35px;
 }
 .OrderHeader {
     padding-top: 1px;
     text-align: center;
+    color: gray;
 }
 .OrderHeader > span {
     vertical-align: middle;

@@ -27,7 +27,7 @@ const ProductLayout = (props) => {
               image1={item.image1}
               image2={item.image2}
               category={item.category}
-              rating={item.rating}
+              rating={+item.rating}
               price={item.price}
               name={item.name}
             />

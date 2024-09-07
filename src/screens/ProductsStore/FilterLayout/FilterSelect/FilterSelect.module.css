@@ -14,11 +14,13 @@
     font-weight: 400;
 }
 .CheckBoxs {
-    width: 1rem;
-    height: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 1px;
-    background-color: transparent;
+    width: 1rem !important;
+    height: 1rem !important;
+    border: 1px solid #ccc !important;
+    border-radius: 4px !important;
+    background-color: white;
+    margin-right: 5px !important;
+    transition: background-color 0.3s ease-in-out !important;
 }
 
 .CheckBoxs:checked {

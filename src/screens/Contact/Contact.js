@@ -9,23 +9,24 @@ import { ImNotification } from "react-icons/im";
 const touchData = [
   {
     id: "address",
-    icon: <IoHomeOutline />,
-    description: "Plot 22 haruk road off Obiwali Road Port Harcourt Rivers , 500001 NG",
+    icon: <IoHomeOutline size={20} style={{ verticalAlign: "middle" }} />,
+    description:
+      "Plot 22 haruk road off Obiwali Road Port Harcourt Rivers , 500001 NG",
   },
   {
     id: "phone",
-    icon: <MdWifiCalling />,
+    icon: <MdWifiCalling size={20} style={{ verticalAlign: "middle" }} />,
     description: "+234810-301-1234",
   },
   {
     id: "mail",
-    icon: <MdOutlineMail />,
+    icon: <MdOutlineMail size={20} style={{ verticalAlign: "middle" }} />,
     description: "boldrixnltd@gmail.com",
   },
   {
     id: "work-days",
-    icon: <ImNotification />,
-    description: "Monday - Friday 8 AM - 8 PM", 
+    icon: <ImNotification size={20} style={{ verticalAlign: "middle" }} />,
+    description: "Monday - Friday 8 AM - 8 PM",
   },
 ];
 
@@ -35,30 +36,52 @@ const Contact = () => {
       elementType: "input",
       elementConfig: { type: "text", placeholder: "Name" },
       value: "",
+      valid: false,
     },
 
     email: {
       elementType: "input",
       elementConfig: { type: "email", placeholder: "Email" },
       value: "",
+      valid: false,
     },
     mobileNumber: {
       elementType: "input",
       elementConfig: { type: "text", placeholder: "Mobile Number" },
       value: "",
+      valid: false,
     },
     comments: {
       elementType: "textarea",
-      elementConfig: { type: "text", placeholder: "Comments" },
+      elementConfig: { type: "text", placeholder: "Message" },
       value: "",
+      valid: false,
     },
   });
+  const [formIsValid, setFormIsValid] = useState(false);
 
   const submitFormHandler = (event) => {
     event.preventDefault();
   };
 
-  const inputChangeHandler = (event, identi) => {};
+  const inputChangeHandler = (event, identi) => {
+    const originalContact = { ...contact };
+
+    const updatedContact = {
+      ...originalContact[identi],
+      value: event.target.value,
+    };
+    updatedContact.valid = updatedContact.value.trim() !== "";
+    originalContact[identi] = updatedContact;
+
+    let isValid = true;
+    for (let key in originalContact) {
+      isValid = originalContact[key].valid && isValid;
+    }
+
+    setContact(originalContact);
+    setFormIsValid(isValid);
+  };
 
   const formElement = [];
 
@@ -83,7 +106,7 @@ const Contact = () => {
           />
         ))}
       </div>
-      <button>Submit</button>
+      <button disabled={!formIsValid} type="sumit">Submit</button>
     </form>
   );
 
@@ -97,7 +120,8 @@ const Contact = () => {
           <ul className={classes.Items}>
             {touchData.map((data) => (
               <li className={classes.Item} key={data.id}>
-                <span style={{verticalAlign: "middle"}} >{data.icon}</span> <span> {data.description} </span> 
+                <span style={{ verticalAlign: "middle" }}>{data.icon}</span>{" "}
+                <div>{data.description} </div>
               </li>
             ))}
           </ul>

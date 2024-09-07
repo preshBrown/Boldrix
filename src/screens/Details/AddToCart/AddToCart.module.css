@@ -103,6 +103,20 @@ margin-left: 10px;
   background-color: var(--specialcontent-background-color);
   color: black;
 }
+
+.AddToCartButton:disabled {
+  border-color: gray;
+  background: #ccc;
+  color: gray;
+  cursor: not-allowed;
+}
+
+.AddToCartButton:disabled:hover {
+  border-color: gray;
+  background: #ccc;
+  color: gray;
+  cursor: not-allowed;
+}
 .AddToCartFooter {
     padding: 15px;
 }

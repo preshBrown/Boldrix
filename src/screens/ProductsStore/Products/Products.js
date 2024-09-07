@@ -11,21 +11,36 @@ import FilterLayout from "../FilterLayout/FilterLayout";
 import Modal from "../../../components/Interfaces/Modal/Modal";
 import FilterModal from "../FilterLayout/FilterModal/FilterModal";
 import { useLocation } from "react-router-dom";
+import {
+  bestPickItems,
+  hotDealsItems,
+  newArrivalsItems,
+  recommendedItems,
+} from "../../Home/HomeData";
+import { initProductStore } from "../../../store/productStore/productStoreActions";
+import { useDispatch, useSelector } from "react-redux";
 // useLocation
-
 
 const Products = () => {
   const [layoutControl, setLayoutControl] = useState("One");
   const [mobileFilter, setMobileFilter] = useState(false);
   const [filter, setFilter] = useState(false);
-  // const [enableStoreLayoutWidth, setEnableStoreLayoutWidth] = useState(false);
-  // const bodyFilterLayoutRef = React.createRef()
 
-  
-  // useEffect(() => {
-  //   console.log("🚀 ~ Products ~ bodyFilterLayoutRef:", bodyFilterLayoutRef)
-  //   if(bodyFilterLayoutRef.current) setEnableStoreLayoutWidth(true)
-  // })
+  const dispatch = useDispatch();
+  const storeProducts = useSelector((state) => state.pStore.productStore);
+  const loading = useSelector((state) => state.pStore.loading);
+  const error = useSelector((state) => state.pStore.error);
+
+  useEffect(() => {
+    const allProducts = [
+      ...bestPickItems,
+      ...recommendedItems,
+      ...hotDealsItems,
+      ...newArrivalsItems,
+    ];
+
+    dispatch(initProductStore(allProducts));
+  }, []);
 
   const controls = (position) => {
     setLayoutControl(position);
@@ -34,23 +49,33 @@ const Products = () => {
     setFilter(!filter);
   };
   const filterHandlerMobile = () => {
-    setMobileFilter(!mobileFilter)
+    setMobileFilter(!mobileFilter);
   };
 
   const sortInputHandler = (e) => {
     console.log(e);
   };
-  
 
   return (
     <>
-        <div className={classes.MobileFilter}>
-          <FilterModal header="Filters" footer={<div className={classes.footerButton}><Button clicked={filterHandlerMobile} W-100>Ok</Button></div>} show={mobileFilter} close={filterHandlerMobile}>
-           <div className={classes.FilterModalContents}>
-            <FilterLayout />
+      <div className={classes.MobileFilter}>
+        <FilterModal
+          header="Filters"
+          footer={
+            <div className={classes.footerButton}>
+              <Button clicked={filterHandlerMobile} W-100>
+                Ok
+              </Button>
             </div>
-          </FilterModal>
-        </div>
+          }
+          show={mobileFilter}
+          close={filterHandlerMobile}
+        >
+          <div className={classes.FilterModalContents}>
+            <FilterLayout />
+          </div>
+        </FilterModal>
+      </div>
 
       <article className={classes.Products}>
         <div className={classes.Products_Wrapper}>
@@ -75,8 +100,10 @@ const Products = () => {
           </header>
 
           <div className={classes.ProductsBody}>
-            {filter && <FilterLayout  className={classes.FilterLayoutBody} />}
+            {filter && <FilterLayout className={classes.FilterLayoutBody} />}
             <StoreLayout
+              loading={loading}
+              productStore={storeProducts}
               switched={layoutControl !== "One"}
               LayoutModes={layoutControl}
               filter={filter}
