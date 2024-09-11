@@ -36,7 +36,7 @@ const AddToCart = (props) => {
       <article className={classes.AddToCartInfo}>
         <div className={classes.price}>
           <h2>
-            {props.price} <span className={classes.stroke}>$ {props.initialPrice}</span>
+          ₦ {props.price} <span className={classes.stroke}>₦ {props.initialPrice}</span>
           </h2>
           <small>Price is per bottle</small>
         </div>
@@ -74,7 +74,7 @@ const AddToCart = (props) => {
           <span style={{ verticalAlign: "middle" }} className={classes.Icons}>
             <CiDeliveryTruck size={26} />{" "}
           </span>{" "}
-          <span>Estimated between next Month, Wed, Sep 07 and Thu, Sep 09</span>
+          <span>Estimated between {props.deliveryStartDate} and {props.deliveryEndDate}</span>
         </h5>
         <h5>
           <span style={{ verticalAlign: "middle" }} className={classes.Icons}>

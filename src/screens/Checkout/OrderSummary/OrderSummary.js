@@ -9,11 +9,11 @@ const OrderSummary = (props) => (
       <li className={classes.OrderSummaryItem}>
         item's total ({props.itemTotal})
       </li>
-      <li className={[classes.OrderSummaryItem, classes.right].join(" ")}>{props.itemPriceTotalSum} </li>
+      <li className={[classes.OrderSummaryItem, classes.right].join(" ")}>₦ {props.itemPriceTotalSum} </li>
       <li className={classes.OrderSummaryItem}> Delivery fees</li>
-      <li className={[classes.OrderSummaryItem, classes.right].join(" ")}>$ {props.deliveryFee}</li>
+      <li className={[classes.OrderSummaryItem, classes.right].join(" ")}>₦ {props.deliveryFee}</li>
       <li className={[classes.OrderSummaryItem, classes.total].join(" ")}>Total </li>
-      <li className={[classes.OrderSummaryItem, classes.right, classes.total].join(" ")}>$ {props.sum}</li>
+      <li className={[classes.OrderSummaryItem, classes.right, classes.total].join(" ")}>₦ {props.sum}</li>
     </ul>
     <AuthForm />
   </article>

@@ -72,7 +72,7 @@ const Cart = (props) => {
       <>
         <header className={classes.CartHeader}>
           <div className={classes.Subtotal}>
-            <h5>Subtotal</h5> <h4>$ {cartProp.totalPrice}</h4>
+            <h5>Subtotal</h5> <h4>₦ {cartProp.totalPrice}</h4>
           </div>
           <h5>CART ({cartProp.quantities})</h5>
           <small>Delivery fees not included yet.</small>
@@ -96,7 +96,7 @@ const Cart = (props) => {
             <IoMdCall size={26} />
           </Button>{" "}
           <Button clicked={onProceedToCheckout} className={classes.BtnCheckout}>
-            CHECKOUT ( $ {cartProp.totalPrice} ){" "}
+            CHECKOUT ( ₦ {cartProp.totalPrice} ){" "}
           </Button>
         </section>
 

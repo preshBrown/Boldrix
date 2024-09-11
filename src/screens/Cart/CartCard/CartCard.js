@@ -40,7 +40,7 @@ const CartCard = (props) => {
           <small>
             Variation: <span>ORIGINAL</span>
           </small>
-          <h4>$ {props.price}</h4>
+          <h4>₦ {props.price}</h4>
           <small>{props.avalability}</small>
         </div>
       </div>

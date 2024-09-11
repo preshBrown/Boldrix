@@ -46,7 +46,7 @@ const OrderCard = (props) => {
         >
 
           <h4>{props.header}</h4>{" "}
-          <h4 className={classes.cost}>{props.cost}</h4>{" "}
+          <h4 className={classes.cost}>₦ {props.cost}</h4>{" "}
           <FaChevronRight
             className={classes.Icon}
             onClick={toggleInfo.bind(this)}

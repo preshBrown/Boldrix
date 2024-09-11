@@ -23,8 +23,8 @@ const Checkout = (props) => {
   const loading = useSelector((state) => state.dc.cartLoading);
   const error = useSelector((state) => state.dc.error);
   const purchasedComplete = useSelector((state) => state.orders.purchased);
-const [deliveryStartDate, setDeliveryStartDate] = useState("")
-const [deliveryEndDate, setDeliveryEndDate] = useState("")
+  const [deliveryStartDate, setDeliveryStartDate] = useState("");
+  const [deliveryEndDate, setDeliveryEndDate] = useState("");
 
   useEffect(() => {
     const allProducts = [
@@ -52,25 +52,31 @@ const [deliveryEndDate, setDeliveryEndDate] = useState("")
     const day = date.getDate();
     const month = date.getMonth() + 1;
     const year = date.getFullYear();
-    const orderDate = new Date(`${year}-${month}-${day}`)
+    
+    const orderDate = new Date(`${year}-${month}-${day}`);
 
-const addDays = (date, days) => {
-  const result = new Date(date)
-  result.setDate(result.getDate() + days);
-  return result;
-}
+    const addDays = (date, days) => {
+      const result = new Date(date);
+      result.setDate(result.getDate() + days);
+      return result;
+    };
 
-const deliveryStartDate = addDays(orderDate, 4);
-const deliveryEndDate = addDays(orderDate, 9);
+    const deliveryStartDate = addDays(orderDate, 4);
+    const deliveryEndDate = addDays(orderDate, 9);
 
-const options = {year: 'numeric', month:"short", day: 'numeric' }
-const formattedStartDate = deliveryStartDate.toLocaleDateString('en-US', options)
-const formattedEndDate = deliveryEndDate.toLocaleDateString('en-US', options)
+    const options = { year: "numeric", month: "short", day: "numeric" };
+    const formattedStartDate = deliveryStartDate.toLocaleDateString(
+      "en-GB",
+      options
+    );
+    const formattedEndDate = deliveryEndDate.toLocaleDateString(
+      "en-GB",
+      options
+    );
 
-setDeliveryStartDate(formattedStartDate)
-setDeliveryEndDate(formattedEndDate)
+    setDeliveryStartDate(formattedStartDate);
+    setDeliveryEndDate(formattedEndDate);
     dispatch(initCart(newCart));
-
   }, []);
 
   let checkout = (
@@ -152,15 +158,22 @@ setDeliveryEndDate(formattedEndDate)
               </div>
             </article>
 
-            <DeliveryDetails deliveryStartDate={deliveryStartDate} deliveryEndDate={deliveryEndDate} purchasedComplete={purchasedComplete} items={cartProp.items} />
+            <DeliveryDetails
+              deliveryStartDate={deliveryStartDate}
+              deliveryEndDate={deliveryEndDate}
+              purchasedComplete={purchasedComplete}
+              items={cartProp.items}
+            />
           </div>
         </section>
       </>
     );
   }
   let navigate;
-  if (cartProp.items.length === 0 && !purchasedComplete) navigate =  <Navigate to="/" />
-  if (cartProp.items.length === 0 && purchasedComplete) navigate =  <Navigate to="/orders" />
+  if (cartProp.items.length === 0 && !purchasedComplete)
+    navigate = <Navigate to="/" />;
+  if (cartProp.items.length === 0 && purchasedComplete)
+    navigate = <Navigate to="/orders" />;
 
   return (
     <>

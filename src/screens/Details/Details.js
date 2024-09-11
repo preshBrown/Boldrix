@@ -27,6 +27,9 @@ import classes from "./Details.module.css";
 import Spinner from "../../components/Interfaces/Spinner/Spinner";
 
 const Details = (props) => {
+  const [deliveryStartDate, setDeliveryStartDate] = useState("");
+  const [deliveryEndDate, setDeliveryEndDate] = useState("");
+
   const dispatch = useDispatch();
   const product = useSelector((state) => state.dc.productDetail);
   const loading = useSelector((state) => state.dc.loading);
@@ -49,6 +52,35 @@ const Details = (props) => {
       (products) => products.id.toString() === prodId
     );
     console.log("🚀 ~ useEffect ~ product:", product);
+    const date = new Date();
+
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
+    
+    const orderDate = new Date(`${year}-${month}-${day}`);
+
+    const addDays = (date, days) => {
+      const result = new Date(date);
+      result.setDate(result.getDate() + days);
+      return result;
+    };
+
+    const deliveryStartDate = addDays(orderDate, 4);
+    const deliveryEndDate = addDays(orderDate, 9);
+
+    const options = {weekday:"long", year: "numeric", month: "short", day: "numeric" };
+    const formattedStartDate = deliveryStartDate.toLocaleDateString(
+      "en-GB",
+      options
+    );
+    const formattedEndDate = deliveryEndDate.toLocaleDateString(
+      "en-GB",
+      options
+    );
+
+    setDeliveryStartDate(formattedStartDate);
+    setDeliveryEndDate(formattedEndDate);
 
     setTimeout(() => {
       dispatch(initDetail(product));
@@ -80,7 +112,7 @@ const Details = (props) => {
           <div className={classes.Details}>
             <div className={classes.DetailsImgWrapper}>
               <div className={classes.DetailsImgContainer}>
-                <img src={defaultImg} alt="Details" />
+                <img src={product.image1} alt="Details" />
               </div>
               <h4>{product.brandSummary}</h4>
               <h5>{product.descriptionSummary}</h5>
@@ -144,7 +176,9 @@ const Details = (props) => {
         </section>
 
         <section style={{ marginBottom: "35px" }}>
-          <AddToCart initialPrice={product.initialPrice} price={product.price} id={prodId} />
+          <AddToCart deliveryStartDate={deliveryStartDate}
+           deliveryEndDate={deliveryEndDate}
+           initialPrice={product.initialPrice} price={product.price} id={prodId} />
         </section>
 
         <section>

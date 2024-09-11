@@ -58,7 +58,7 @@ const ProductList = (props) => {
 
         <div className={classes.ProductListInfo}>
           <h5>{props.name}</h5>
-          <h4>$ {+props.price}</h4>
+          <h4>₦ {+props.price}</h4>
           <Link to={`/products/${props.id}`}>Read More</Link>
         </div>
       </Link>

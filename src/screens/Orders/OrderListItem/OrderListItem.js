@@ -14,7 +14,7 @@ const OrderListItem = (props) => {
     <li className={classes.ListItem}>
     <article className={classes.ItemContainer}>
         <div className={classes.ImageContainer}>
-            <img src={image} alt='ListItems' />
+            <img src={props.img} alt='ListItems' />
         </div>
         <div className={classes.Description}>
             <span>

@@ -2,13 +2,87 @@ import React from "react";
 import logo1 from "./productsImages/Bespoke-bourbon-cream.jpg";
 import logo2 from "./productsImages/water.jpg";
 
+import yummyYo1 from "./productsImages/yommy-yo3d1.png";
+import yummyYo2 from "./productsImages/yommy-yo-3d2.png";
+
+import aquaWater1 from "./productsImages/Aquawater3d.png";
+import aquaWater2 from "./productsImages/water.jpg";
+
+import boldrxBitters1 from "./productsImages/BoldrixBitters3d1.png";
+import boldrxBitters2 from "./productsImages/bitters-2.png";
+
+import tropicaTwist1 from "./productsImages/tropical-twist-3d1.png";
+import tropicaTwist2 from "./productsImages/juice-3d2.jpg.png";
+
+import crimsonWave1 from "./productsImages/Crimson Wave3d1.png";
+import crimsonWave2 from "./productsImages/Crimson Wave-2.png";
+
+import citrusChill1 from "./productsImages/Citrus-Chill-new3d1..png";
+import citrusChill2 from "./productsImages/juice-3d2.jpg.png";
+
+import velvetNight1 from "./productsImages/Velvet Night3d11.png";
+import velvetNight2 from "./productsImages/Velvet Night3d2.png";
+
+import azuraWave1 from "./productsImages/Azure Wave3d11.png";
+import azuraWave2 from "./productsImages/bittersback3d2.png";
+
+import cocoaDelight1 from "./productsImages/Cocoa Delight3d1.png";
+import cocoaDelight2 from "./productsImages/Cocoa Delight3d2.png";
+
+import sunsetCitrus1 from "./productsImages/Sunset Citrus----2.png";
+import sunsetCitrus2 from "./productsImages/Sunset Citrus3d2.png";
+
+import berryBliss1 from "./productsImages/Berry Bliss-3d1.png";
+import berryBliss2 from "./productsImages/Berry Bliss3d2.png";
+
+import goldenHarvest1 from "./productsImages/Golden Harvest3d11.png";
+import goldenHarvest2 from "./productsImages/Golden Harvest3d2.png";
+
+import ChocoDelight1 from "./productsImages/Choco Delight.png";
+import ChocoDelight2 from "./productsImages/Choco Delight3d2.png";
+
+import TropicalBreeze1 from "./productsImages/TropicalB3d1.png";
+import TropicalBreeze2 from "./productsImages/juice-3d2.jpg.png";
+
+import RosePetal1 from "./productsImages/Rose Petal3d1.png";
+import RosePetal2 from "./productsImages/Crimson Wave-2.png";
+
+import GingerBliss1 from "./productsImages/Ginger Bliss.png";
+import GingerBliss2 from "./productsImages/Ginger Bliss3d2.png";
+
+import TropicalParadise1 from "./productsImages/Tropical Paradise.png";
+import TropicalParadise2 from "./productsImages/Tropical Paradise3d2.png";
+
+import MojitoMagic1 from "./productsImages/Mojito Magic3d1.png";
+import MojitoMagic2 from "./productsImages/Mojito Magic2.png";
+
+import EspressoMartini1 from "./productsImages/Espresso Martini.png";
+import EspressoMartini2 from "./productsImages/Espresso Martini2.jpg";
+
+import BlueberrySparkle1 from "./productsImages/Blueberry Sparkle.png";
+import BlueberrySparkle2 from "./productsImages/Blueberry Sparkle3d2.png";
+
+import CitrusZing1 from "./productsImages/Citrus Zing3d1.png"; 
+import CitrusZing2 from "./productsImages/Citrus Zing2.png";
+
+import BerryFusion1 from "./productsImages/Berry Fusion.png";
+import BerryFusion2 from "./productsImages/Berry Fusion2.jpg";
+
+
+import CoconutCooler1 from "./productsImages/Coconut Cooler3d1.png";
+import CoconutCooler2 from "./productsImages/Coconut Cooler3d2.png";
+
+import LavenderMist1 from "./productsImages/Lavender Mist3d1.png";
+import LavenderMist2 from "./productsImages/Lavender Mist2.png";
+
+
 export const bestPickItems = [
   {
     id: 1,
     brand: "Yummy Yo",
     brandSummary: "Yummy Yo | Cream| 5%| 70cl|",
-    image1: logo1,
-    image2: logo2,
+    image1: yummyYo1,
+    image2: yummyYo2,
     descriptionSummary:
       "A delightful dairy product brand celebrated for it's commitment to delivering high-quality, farm-fresh goodness",
     descriptionIntro:
@@ -33,8 +107,8 @@ export const bestPickItems = [
     id: 2,
     brand: "Aqua Bold Water",
     brandSummary: "Aqua Bold Water| Water|  50cl|",
-    image1: logo1,
-    image2: logo2,
+    image1: aquaWater1,
+    image2: aquaWater2,
     descriptionSummary:
       "A premium hydration choice known for its refreshing taste and commitment to purity",
     descriptionIntro:
@@ -55,8 +129,8 @@ export const bestPickItems = [
     id: 3,
     brand: "Boldriix Bitters",
     brandSummary: "Boldriix Bitters | Spirit| 40%| 75cl|",
-    image1: logo1,
-    image2: logo2,
+    image1: boldrxBitters1,
+    image2: boldrxBitters2,
     descriptionSummary:
       " A unique and flavorful drink known for its rich blend of herbs and botanicals.",
     descriptionIntro:
@@ -82,8 +156,8 @@ export const bestPickItems = [
     id: 4,
     brand: "Tropica Twist",
     brandSummary: "Tropica Twist | Juice | 0% | 1L",
-    image1: logo1,
-    image2: logo2,
+    image1: tropicaTwist1,
+    image2: tropicaTwist2,
     descriptionSummary:
       "Tropica Twist is a refreshing tropical fruit juice blend that captures the essence of sun-ripened fruits. ",
     descriptionIntro:
@@ -107,8 +181,8 @@ export const bestPickItems = [
     id: 5,
     brand: "Crimson Wave",
     brandSummary: "Crimson Wave | Wine | 13.5% | 75cl",
-    image1: logo1,
-    image2: logo2,
+    image1: crimsonWave1,
+    image2: crimsonWave2,
     descriptionSummary:
       "Crimson Wave is a full-bodied red wine known for its deep flavor profile and smooth finish.",
     descriptionIntro:
@@ -132,8 +206,8 @@ export const bestPickItems = [
     id: 6,
     brand: "Citrus Chill",
     brandSummary: "Citrus Chill | Soft | 0% | 330ml",
-    image1: logo1,
-    image2: logo2,
+    image1: citrusChill1,
+    image2: citrusChill2,
     descriptionSummary:
       "Citrus Chill is a zesty and refreshing non-alcoholic beverage that combines the flavors of lemon and lime.",
     descriptionIntro:
@@ -162,12 +236,13 @@ export const bestPickItems = [
 
 
 
-export const recommendedItems = [{
+export const recommendedItems = [
+  {
   id: 7,
   brand: "Velvet Night",
   brandSummary: "Velvet Night | Whiskey | 45% | 70cl",
-  image1: logo1,
-  image2: logo2,
+  image1: velvetNight1,
+  image2: velvetNight2,
   descriptionSummary:
     "Velvet Night is a premium whiskey known for its smooth, rich flavor and deep amber color.",
   descriptionIntro:
@@ -191,8 +266,8 @@ export const recommendedItems = [{
   id: 8,
   brand: "Azure Wave",
   brandSummary: "Azure Wave | Spirit | 37.5% | 50cl",
-  image1: logo1,
-  image2: logo2,
+  image1: azuraWave1,
+  image2: azuraWave2,
   descriptionSummary:
     "Azure Wave is a crisp and refreshing gin, known for its botanical complexity and clean finish.",
   descriptionIntro:
@@ -217,7 +292,7 @@ export const recommendedItems = [{
   brand: "Cocoa Delight",
   brandSummary: "Cocoa Delight | Cream | 20% | 70cl",
   image1: logo1,
-  image2: logo2,
+  image2: cocoaDelight1,
   descriptionSummary:
     "Cocoa Delight is a decadent liqueur that combines rich chocolate flavors with a smooth, creamy texture.",
   descriptionIntro:
@@ -240,9 +315,9 @@ export const recommendedItems = [{
 {
   id: 10,
   brand: "Sunset Citrus",
-  brandSummary: "Sunset Citrus | Cognac | 10% | 500cl",
-  image1: logo1,
-  image2: logo2,
+  brandSummary: "Sunset Citrus | Cognac | 10% | 50cl",
+  image1: sunsetCitrus1,
+  image2: sunsetCitrus2,
   descriptionSummary:
     "Sunset Citrus is a vibrant and zesty cocktail that captures the essence of a summer evening.",
   descriptionIntro:
@@ -253,7 +328,7 @@ export const recommendedItems = [{
   ],
   descriptionOutro:
     "Serve Sunset Citrus chilled, either over ice or straight from the bottle. It's a drink that brings the fun and flavor of summer to any occasion.",
-  bottleSize: "500ml",
+  bottleSize: "5cll",
   Abv: "10%",
   collection: "Recommended",
   category: "Cognac",
@@ -264,35 +339,37 @@ export const recommendedItems = [{
 },
 {
   id: 11,
-  brand: "Emerald Springs",
-  brandSummary: "Emerald Springs | Water | 0% | 75cl",
-  image1: logo1,
-  image2: logo2,
+  brand: "Golden Harvest",
+  brandSummary: "Golden Harvest | Cognac | 5% | 30cl",
+  image1: goldenHarvest1,
+  image2: goldenHarvest2,
   descriptionSummary:
-    "Emerald Springs is a premium sparkling water known for its crisp and clean taste.",
+    "Golden Harvest is a crisp and refreshing beer with a light golden hue. Brewed with the finest barley and hops. ",
   descriptionIntro:
-    "Emerald Springs is the choice for those who appreciate the finer things in life, even in their water. With its light carbonation and pure, refreshing taste, it's the perfect drink to hydrate and rejuvenate.",
+    "Golden Harvest is a beer that celebrates tradition and quality. Each bottle is brewed with care, ensuring that every sip delivers the perfect balance of flavor and refreshment.",
   keyFeatures: [
-    "Naturally sourced and free from any additives.",
-    "Pairs well with meals or enjoyed on its own as a refreshing drink.",
+    "Best enjoyed chilled, either on its own or with your favorite pub snacks.",
+    "A versatile beer that pairs well with a variety of foods, from grilled meats to spicy dishes.",
   ],
   descriptionOutro:
-    "Serve Emerald Springs chilled for the best experience. Whether at the dining table or on the go, it's a water that elevates your hydration routine.",
-  bottleSize: "75cl",
-  Abv: "0%",
-  collection: "Recommended",
-  category: "Water",
+    "Golden Harvest is the perfect companion for a casual evening or a lively gathering with friends. Its crisp, clean taste makes it a beer that everyone can enjoy.",
+  bottleSize: "30cl",
+  Abv: "5%",
+  collection: "Hot Deals",
+  category: "Cognac",
   avalability: "Instock",
-  rating: "4.2",
-  initialPrice: 5000,
-  price: 3500,
+  rating: "4.3",
+  initialPrice: 2000,
+  price: 1500,
 },
+
+
 {
   id: 12,
   brand: "Berry Bliss",
   brandSummary: "Berry Bliss | Soft | 0% | 30cl",
-  image1: logo1,
-  image2: logo2,
+  image1: berryBliss1,
+  image2: berryBliss2,
   descriptionSummary:
     "Berry Bliss is a delicious and nutritious smoothie made from a blend of fresh berries.",
   descriptionIntro:
@@ -324,62 +401,62 @@ export const recommendedItems = [{
 
 
 export const hotDealsItems = [
-  {
-    id: 13,
-    brand: "Golden Harvest",
-    brandSummary: "Golden Harvest | Cognac | 5% | 30cl",
-    image1: logo1,
-    image2: logo2,
-    descriptionSummary:
-      "Golden Harvest is a crisp and refreshing beer with a light golden hue. Brewed with the finest barley and hops. ",
-    descriptionIntro:
-      "Golden Harvest is a beer that celebrates tradition and quality. Each bottle is brewed with care, ensuring that every sip delivers the perfect balance of flavor and refreshment.",
-    keyFeatures: [
-      "Best enjoyed chilled, either on its own or with your favorite pub snacks.",
-      "A versatile beer that pairs well with a variety of foods, from grilled meats to spicy dishes.",
-    ],
-    descriptionOutro:
-      "Golden Harvest is the perfect companion for a casual evening or a lively gathering with friends. Its crisp, clean taste makes it a beer that everyone can enjoy.",
-    bottleSize: "30cl",
-    Abv: "5%",
-    collection: "Hot Deals",
-    category: "Cognac",
-    avalability: "Instock",
-    rating: "4.3",
-    initialPrice: 2000,
-    price: 1500,
-  },
-  {
-    id: 14,
-    brand: "Lavender Mist",
-    brandSummary: "Lavender Mist | Cognac | 0% | 20 Sachets",
-    image1: logo1,
-    image2: logo2,
-    descriptionSummary:
-      "Lavender Mist is a soothing herbal tea blend, featuring the calming flavors of lavender and chamomile.",
-    descriptionIntro:
-      "Lavender Mist is crafted from the finest herbal ingredients, offering a tea that is both comforting and beneficial. The blend of lavender and chamomile is known for its  calming properties, making it an ideal choice for a peaceful moment.",
-    keyFeatures: [
-      "Naturally caffeine-free, making it perfect for bedtime.",
-      "Can be enjoyed hot or cold, depending on your preference.",
-    ],
-    descriptionOutro:
-      "Brew a cup of Lavender Mist and let the soothing aroma and flavors transport you to a place of calm and tranquility. It's the perfect way to end your day on a peaceful note.",
-    bottleSize: "20 Sachets",
-    Abv: "0%",
-    collection: "Hot Deals",
-    category: "Cognac",
-    avalability: "Instock",
-    rating: "4.7",
-    initialPrice: 2300,
-    price: 2000,
-  },
+  // {
+  //   id: 13,
+  //   brand: "Golden Harvest",
+  //   brandSummary: "Golden Harvest | Cognac | 5% | 30cl",
+  //   image1: goldenHarvest1,
+  //   image2: goldenHarvest2,
+  //   descriptionSummary:
+  //     "Golden Harvest is a crisp and refreshing beer with a light golden hue. Brewed with the finest barley and hops. ",
+  //   descriptionIntro:
+  //     "Golden Harvest is a beer that celebrates tradition and quality. Each bottle is brewed with care, ensuring that every sip delivers the perfect balance of flavor and refreshment.",
+  //   keyFeatures: [
+  //     "Best enjoyed chilled, either on its own or with your favorite pub snacks.",
+  //     "A versatile beer that pairs well with a variety of foods, from grilled meats to spicy dishes.",
+  //   ],
+  //   descriptionOutro:
+  //     "Golden Harvest is the perfect companion for a casual evening or a lively gathering with friends. Its crisp, clean taste makes it a beer that everyone can enjoy.",
+  //   bottleSize: "30cl",
+  //   Abv: "5%",
+  //   collection: "Hot Deals",
+  //   category: "Cognac",
+  //   avalability: "Instock",
+  //   rating: "4.3",
+  //   initialPrice: 2000,
+  //   price: 1500,
+  // },
+{
+  id: 14,
+  brand: "Choco Delight",
+  brandSummary: "Choco Delight | Soft | 0% | 330ml",
+  image1: ChocoDelight1,
+  image2: ChocoDelight2,
+  descriptionSummary:
+    "Choco Delight is a rich and creamy chocolate drink made from the finest cocoa.",
+  descriptionIntro:
+    "Choco Delight offers a luxurious chocolate experience with every sip. Made with premium cocoa, it's a drink that's both indulgent and satisfying, perfect for a sweet pick-me-up.",
+  keyFeatures: [
+    "Made with real cocoa for an authentic chocolate taste.",
+    "Can be enjoyed hot or cold, depending on your mood.",
+  ],
+ descriptionOutro:
+  "Serve Choco Delight chilled for a refreshing treat, or warm it up for a comforting hot chocolate experience. It's a drink that’s perfect for any chocolate lover.",
+bottleSize: "330ml",
+Abv: "0%",
+collection: "New Arrivals",
+category: "Soft",
+avalability: "Instock",
+rating: "4.9",
+initialPrice: 2500,
+price: 1800,
+},
   {
     id: 15,
     brand: "Tropical Breeze",
     brandSummary: "Tropical Breeze | Soft | 0% | 1L",
-    image1: logo1,
-    image2: logo2,
+    image1: TropicalBreeze1,
+    image2: TropicalBreeze2,
     descriptionSummary:
       "Tropical Breeze is a refreshing fruit juice blend that brings the taste of the tropics to your glass.",
     descriptionIntro:
@@ -403,8 +480,8 @@ export const hotDealsItems = [
     id: 16,
     brand: "Espresso Martini",
     brandSummary: "Espresso Martini | Cognac | 15% | 50cl",
-    image1: logo1,
-    image2: logo2,
+    image1: EspressoMartini1,
+    image2: EspressoMartini2,
     descriptionSummary:
       "Espresso Martini is a bold and invigorating cocktail with the smoothness of vodka.",
     descriptionIntro:
@@ -428,8 +505,8 @@ export const hotDealsItems = [
     id: 17,
     brand: "Rose Petal",
     brandSummary: "Rose Petal | Wine | 12.5% | 75cl",
-    image1: logo1,
-    image2: logo2,
+    image1: RosePetal1,
+    image2: RosePetal2,
     descriptionSummary:
       "Rose Petal is a delicate and aromatic wine with notes of fresh roses and red berries.",
     descriptionIntro:
@@ -454,8 +531,8 @@ export const hotDealsItems = [
     id: 18,
     brand: "Ginger Bliss",
     brandSummary: "Ginger Bliss | Soft | 0% | 75cl",
-    image1: logo1,
-    image2: logo2,
+    image1: GingerBliss1,
+    image2: GingerBliss2,
     descriptionSummary:
       "Ginger Bliss is a zesty and invigorating non-alcoholic beverage.",
     descriptionIntro:
@@ -479,8 +556,8 @@ export const hotDealsItems = [
     id: 19,
     brand: "Tropical Paradise",
     brandSummary: "Tropical Paradise | Soft | 0% | 50cl",
-    image1: logo1,
-    image2: logo2,
+    image1: TropicalParadise1,
+    image2: TropicalParadise2,
     descriptionSummary:
       "Tropical Paradise is a creamy smoothie blend of tropical fruits, offering a taste of the islands in every sip.",
     descriptionIntro:
@@ -511,8 +588,8 @@ export const newArrivalsItems = [
     id: 20,
     brand: "Mojito Magic",
     brandSummary: "Mojito Magic | Cognac | 12% | 75cl",
-    image1: logo1,
-    image2: logo2,
+    image1: MojitoMagic1,
+    image2: MojitoMagic2,
     descriptionSummary:
       "Mojito Magic is a refreshing cocktail that blends the flavors of lime, mint, and rum for a classic taste.",
     descriptionIntro:
@@ -535,8 +612,8 @@ export const newArrivalsItems = [
     id: 21,
     brand: "Blueberry Sparkle",
     brandSummary: "Blueberry Sparkle |  Water | 0% | 50cl",
-    image1: logo1,
-    image2: logo2,
+    image1: BlueberrySparkle1,
+    image2: BlueberrySparkle2,
     descriptionSummary:
       "Blueberry Sparkle is a lightly carbonated water infused with the essence of ripe blueberries.",
     descriptionIntro:
@@ -560,8 +637,8 @@ export const newArrivalsItems = [
     id: 22,
     brand: "Citrus Zing",
     brandSummary: "Citrus Zing | Soft | 0% | 1L",
-    image1: logo1,
-    image2: logo2,
+    image1: CitrusZing1,
+    image2: CitrusZing2,
     descriptionSummary:
       "Citrus Zing is a refreshing lemonade made with real lemons for a zesty and tangy flavor.",
     descriptionIntro:
@@ -585,8 +662,8 @@ export const newArrivalsItems = [
     id: 23,
     brand: "Berry Fusion",
     brandSummary: "Berry Fusion | Wine | 11% | 75cl",
-    image1: logo1,
-    image2: logo2,
+    image1: BerryFusion1,
+    image2: BerryFusion2,
     descriptionSummary:
       "Berry Fusion is a delightful blend of red berries and grapes, creating a fruity wine with a smooth finish.",
     descriptionIntro:
@@ -610,8 +687,8 @@ export const newArrivalsItems = [
     id: 24,
     brand: "Coconut Cooler",
     brandSummary: "Coconut Cooler | Cognac | 0% | 50cl",
-    image1: logo1,
-    image2: logo2,
+    image1: CoconutCooler1,
+    image2: CoconutCooler2,
     descriptionSummary:
       "Coconut Cooler is a tropical mocktail that combines the creamy taste of coconut with a hint of pineapple.",
     descriptionIntro:
@@ -634,27 +711,27 @@ export const newArrivalsItems = [
 
   {
     id: 25,
-    brand: "Choco Delight",
-    brandSummary: "Choco Delight | Soft | 0% | 330ml",
-    image1: logo1,
-    image2: logo2,
+    brand: "Lavender Mist",
+    brandSummary: "Lavender Mist | Cognac | 0% | 20 Sachets",
+    image1: LavenderMist1,
+    image2: LavenderMist2,
     descriptionSummary:
-      "Choco Delight is a rich and creamy chocolate drink made from the finest cocoa.",
+      "Lavender Mist is a soothing herbal tea blend, featuring the calming flavors of lavender and chamomile.",
     descriptionIntro:
-      "Choco Delight offers a luxurious chocolate experience with every sip. Made with premium cocoa, it's a drink that's both indulgent and satisfying, perfect for a sweet pick-me-up.",
+      "Lavender Mist is crafted from the finest herbal ingredients, offering a tea that is both comforting and beneficial. The blend of lavender and chamomile is known for its  calming properties, making it an ideal choice for a peaceful moment.",
     keyFeatures: [
-      "Made with real cocoa for an authentic chocolate taste.",
-      "Can be enjoyed hot or cold, depending on your mood.",
+      "Naturally caffeine-free, making it perfect for bedtime.",
+      "Can be enjoyed hot or cold, depending on your preference.",
     ],
-   descriptionOutro:
-    "Serve Choco Delight chilled for a refreshing treat, or warm it up for a comforting hot chocolate experience. It's a drink that’s perfect for any chocolate lover.",
-  bottleSize: "330ml",
-  Abv: "0%",
-  collection: "New Arrivals",
-  category: "Soft",
-  avalability: "Instock",
-  rating: "4.9",
-  initialPrice: 2500,
-  price: 1800,
-  }
+    descriptionOutro:
+      "Brew a cup of Lavender Mist and let the soothing aroma and flavors transport you to a place of calm and tranquility. It's the perfect way to end your day on a peaceful note.",
+    bottleSize: "20 Sachets",
+    Abv: "0%",
+    collection: "Hot Deals",
+    category: "Cognac",
+    avalability: "Instock",
+    rating: "4.7",
+    initialPrice: 2300,
+    price: 2000,
+  },
 ];
