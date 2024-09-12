@@ -27,7 +27,7 @@ const ProductInfo = (props) => {
             <h5>{props.subHeader}</h5>
             <p>{props.description}</p>
             <ol style={{margin: 0, padding: "15px"}}>
-              {props.keyFeatures.map((keyF, index) => (
+              {props.keyFeatures && props.keyFeatures.map((keyF, index) => (
                 <li key={index}>{keyF}</li>
               ))}
             </ol>
