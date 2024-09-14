@@ -1,0 +1,44 @@
+.Valid_age {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    z-index: 200;
+    overflow-y: auto;
+    outline: none;
+}
+
+.Valid_ageWrapper {
+    /* height: 800px; */
+    width: 90%;
+    margin: auto;
+    background-color: white;
+    color: black;
+    padding: 30px 0 15px 0;
+    max-width: 40rem;
+}
+.Valid_ageWrapperHeader {
+    max-width: 500px;
+    padding: 15px;
+    margin: auto;
+}
+.Valid_ageWrapperHeader > p {
+    padding-top: 10px;
+    text-align: center;
+}
+.LogoWrapper {
+    height: 55px;
+    width: 200px;
+    margin: auto;
+}
+.LogoWrapper  > img {
+    height: 100%;
+    width: 100%;
+}
+
+.Valid_ageWrapperHeader > p {
+    text-align: center;
+}

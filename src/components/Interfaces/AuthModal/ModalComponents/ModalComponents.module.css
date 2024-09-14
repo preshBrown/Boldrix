@@ -18,7 +18,7 @@
     text-decoration: none;
     padding: 10px;
     font-weight: bold;
-    color: var(--primary-text-color);
+    color: white;
     /* color: white; */
 }
 
@@ -29,7 +29,7 @@
 
 a.active {
    
-    color:  red;
+    color:  rgba(10, 10, 119);
 }
 
 .LogoutBtn {

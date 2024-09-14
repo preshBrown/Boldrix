@@ -12,6 +12,8 @@
 
 .SearchUi > input:focus {
     outline: none;
-    background-color: rgba(138, 43, 226, 0.3);
-    border-color: blueviolet;
+    /* background-color: rgba(138, 43, 226, 0.3);*/
+    /* border-color: blueviolet;  */
+    background-color:var(--inputbackground-color);
+    border-color:var(--inputborder-color);
   }

@@ -13,8 +13,12 @@
 
 .inputClass:focus {
   outline: none;
-  background-color: rgba(138, 43, 226, 0.3) !important;
+  background-color:var(--inputbackground-color) !important;
 }
 .Invalid {
   background-color: rgb(250, 166, 166) !important;
 }
+
+
+/* background-color:var(--inputbackground-color);
+    border-color:var(--inputborder-color); */

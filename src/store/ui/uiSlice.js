@@ -2,7 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   theme: "light",
-  authDropdown: false
+  authDropdown: false,
+  isValidAge: true
+
 };
 
 const uiSlice = createSlice({
@@ -32,6 +34,9 @@ const uiSlice = createSlice({
       console.log("slice-ReachedClose");
       state.authDropdown = false
       console.log(state.authDropdown);
+    },
+    isValidAge (state, actions) {
+      state.isValidAge = false
     }
   },
 

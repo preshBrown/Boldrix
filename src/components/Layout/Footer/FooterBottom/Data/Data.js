@@ -14,24 +14,25 @@ import { FaTelegramPlane } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 
 export const coreList = [
-  { name: "App", to: "#" },
+  // { name: "App", to: "#" },
   { name: "About", to: "#" },
-  { name: "Premium", to: "#" },
-  { name: "Gifting", to: "#" },
   { name: "Contact", to: "#" },
-  { name: "Press", to: "#" },
-  { name: "Wine News", to: "#" },
-  { name: "Wine Style Awward", to: "#" },
-  { name: "Merchants", to: "#" },
-  { name: "Brand Partnerships", to: "#" },
-  { name: "Become an Affiliate", to: "#" },
-  { name: "Careers", to: "#" },
   { name: "Terms of Use", to: "#" },
   { name: "Privacy Policy", to: "#" },
   { name: "Content Policy", to: "#" },
   { name: "Terms of Sale", to: "#" },
-  { name: "Site Map", to: "#" },
-  { name: "Wistleblower", to: "#" },
+  { name: "Wine News", to: "#" },
+  { name: "Premium", to: "#" },
+  { name: "Gifting", to: "#" },
+  { name: "Become an Affiliate", to: "#" },
+  // { name: "Press", to: "#" },
+  // { name: "Wine Style Awward", to: "#" },
+  // { name: "Merchants", to: "#" },
+  // { name: "Brand Partnerships", to: "#" },
+  // { name: "Careers", to: "#" },
+  
+  // { name: "Site Map", to: "#" },
+  // { name: "Wistleblower", to: "#" },
 ];
 
 export const paymentMethods = [
@@ -44,7 +45,7 @@ export const paymentMethods = [
     name: "discover",
     icon: <FaCcDiscover style={{ color: "rgb(255, 123, 0)" }} size={40} />,
   },
-  { name: "pay", icon: <FaApplePay style={{ color: "black" }} size={40} /> },
+  { name: "pay", icon: <FaApplePay style={{ color: "white" }} size={40} /> },
   {
     name: "gpay",
     icon: <FaGooglePay style={{ color: "rgb(255, 217, 0)" }} size={40} />,

@@ -21,9 +21,10 @@
 }
 .menu-flags-button:focus {
     outline: none;
-    background-color: rgba(138, 43, 226, 0.3) !important;
-    border-color: blueviolet !important;
+    background-color:var(--inputbackground-color) !important;
+    border-color: var(--inputborder-color) !important;
 }
 /* .ReactFlagsSelect-module_selectOptions {
-
+background-color:var(--inputbackground-color);
+    border-color:var(--inputborder-color);
 } */

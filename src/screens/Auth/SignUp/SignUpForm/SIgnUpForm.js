@@ -145,6 +145,7 @@ const SignUpForm = (props) => {
       },
       label: "Terms & Condition",
       value: "Agreed",
+      isSignUp: true,
       validation: { required: true, isChecked: true, checked: false },
       valid: false,
     },
@@ -297,6 +298,7 @@ const SignUpForm = (props) => {
                 null,
                 fm.config.visibilityType
               )}
+              isSignUp={fm.config.isSignUp}
               shouldVal={fm.config.validation}
               invalid={!fm.config.valid}
               touched={fm.config.touched}

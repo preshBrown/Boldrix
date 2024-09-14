@@ -19,6 +19,7 @@ import Category from "../../components/Category/Category";
 import DemoImage from "../../components/DemoImage/DemoImage";
 import Components from "./components/HomeImage/ImagesComponents/Components";
 import HomeLoadingSpinner from "../../components/Interfaces/HomeLoadingSpinner/HomeLoadingSpinner"
+import ValidAge from "../ValidAge/ValidAge";
 
 
 
@@ -88,6 +89,7 @@ const Home = (props) => {
 
   return (
     <>
+    {/* <ValidAge /> */}
       {homeSpinner}
       <HomeImage images={Components} />
 

@@ -1,0 +1,60 @@
+.inputFields {
+    margin-bottom: 10px;
+}
+
+.country-Grid,
+.date-Grid  {
+width: 90%;
+max-width: 500px;
+margin: auto;
+margin-bottom: 20px;
+}
+
+.DClaimer {
+    max-width: 500px;
+    padding: 15px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.DClaimer > small {
+    display: block;
+    margin-bottom: 20px;
+}
+.ValidAgeBtn {
+    margin: auto;
+}
+.OutTro {
+    max-width: 500px;
+    padding: 15px;
+    margin: auto; 
+    text-align: center;
+}
+.OutTro > small {
+    display: block;
+    font-size: 12px;
+    /* margin-bottom: px; */
+}
+
+.notAllowed {
+    color: red;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    max-width: 450px;
+}
+
+.notAllowed > p {
+    margin-top: 8px 0;
+    font-size: 14px;
+}
+
+.consent-Grid,
+.Tick {
+    display: block;
+width:fit-content;
+margin: auto
+}
+
+.Tick {
+
+}

@@ -85,10 +85,18 @@ const GridInputs = (props) => {
             className={[...inputClass, classes.Check].join(" ")}
             {...props.elementConfig}
             onChange={props.changed}
-            required={true}
+            required={false}
           />
           <label>
-            Agree to <Button to="/terms-and-conditions">{props.label}</Button>
+            {props.isSignUp ? (
+              <>
+                {" "}
+                Agree to{" "}
+                <Button to="/terms-and-conditions">{props.label}</Button>
+              </>
+            ) : (
+              <Button to="#">{props.label}</Button>
+            )}
           </label>
         </div>
       );
@@ -163,6 +171,32 @@ const GridInputs = (props) => {
             selected={props.value}
             onSelect={props.changed}
             {...props.elementConfig}
+          />
+        </div>
+      );
+      break;
+    case "date":
+      gInputs = (
+        <div className={props.className}>
+          <label className={classes.Label}>
+            {props.label}{" "}
+            {invalid && touched ? (
+              <small className={classes["error__message"]}>
+                <span className={classes.Icon}>
+                  {" "}
+                  <ImNotification />
+                </span>{" "}
+                {props.note}
+              </small>
+            ) : null}
+          </label>
+          <input
+            className={inputClass.concat(classes.Input).join(" ")}
+            {...props.elementConfig}
+            value={props.value}
+            onChange={props.changed}
+            // min={1915}
+            // max={2024}
           />
         </div>
       );

@@ -1,3 +1,6 @@
+.ProductInfo {
+  background-color: var( --foreground-color);
+}
 .ProductInfoHeader {
     background-color: black;
     color: white;

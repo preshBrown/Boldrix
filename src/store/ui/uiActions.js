@@ -1,5 +1,5 @@
 import { uiActions } from "./uiSlice";
-const { setTheme, toggleTheme, openAuthDropdown, closeAuthDropdown } = uiActions;
+const { setTheme, toggleTheme, openAuthDropdown, closeAuthDropdown, isValidAge } = uiActions;
 
 
 export const initTheme = (theme) => {
@@ -25,3 +25,8 @@ export const closeAuthUi = () => {
         dispatch(closeAuthDropdown())
     }
 }
+export const onIsValidAge = () => {
+    return dispatch => {
+        dispatch(isValidAge())
+    }
+} 

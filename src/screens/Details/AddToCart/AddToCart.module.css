@@ -6,7 +6,7 @@
   background-color: var(--foreground-color);
 }
 .header {
-  background-color: black;
+  background-color: var( --outdoor-background-color);
   padding: 20px;
   border-radius: 10px 10px 0 0;
   /* margin-bottom: 25px; */

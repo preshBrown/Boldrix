@@ -60,7 +60,9 @@
     border-radius: 5px;
     padding: 14.5px;
     border: none;
-   
+    /* background-color: var( --outdoor-background-color);    */
+    /* background-color:darkgray;    */
+
 }
 
 .Refunds {

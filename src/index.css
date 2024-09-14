@@ -13,6 +13,9 @@ body {
 
 
 [data-theme="light"] { 
+  --inputbackground-color:  rgb(0, 0, 46, 0.7);
+  --inputborder-color: rgba(10, 10, 119, 0.5);
+  --outdoor-background-color:black;
 --spinner-color: gray;
   --home-shadow-wrapper-color: rgba(0, 0, 0, 0.2);
   --shadow-wrapper-color:rgba(0, 0, 0, 0.6);
@@ -24,28 +27,44 @@ body {
   --foreground-color: white;
   --content-color: black;
   --primary-text-color: black;
-  --footTop-background-color: #ccc;
-  --footbuttom-background-color: rgba(10, 10, 119, 0.5);
+  /* --footTop-background-color: #ccc; */
+  /* --footbuttom-background-color: rgba(10, 10, 119, 0.5); */
+  --footTop-background-color: rgba(0, 0, 46, 0.3);
+  --footbuttom-background-color:  rgba(0, 0, 46, 0.3);
   --specialcontent-background-color:grey;
   --specialcontent-text-color:white;
   --text-hover: blueviolet;
   /* rgba(10, 10, 119, 0.5) */
 }
 
-[data-theme="dark"] {--spinner-color: rgb(10, 10, 119);
+[data-theme="dark"] {
+  --inputbackground-color:  rgb(0, 0, 46, 0.7);
+  --inputborder-color:  rgba(10, 10, 119, 0.5);
+  --outdoor-background-color:darkgray;
+  /* --spinner-color: darkgray; */
+  --spinner-color: rgb(31, 27, 41);
   --home-shadow-wrapper-color: rgba(255, 255, 255, 0.2);
   --shadow-wrapper-color:rgba(255, 255, 255, 0.2);
   --dynamic-sidebarbackground-color: rgba(255, 255, 255, 0.1);;
-  --firstheaderbackground-color: rgb(10, 10, 119);
-  --secondheaderbackground-color:  rgba(10, 10, 119, 0.5);
+  /* --firstheaderbackground-color: rgb(10, 10, 119); */
+  --firstheaderbackground-color: rgb(0, 0, 0);
+  /* --secondheaderbackground-color:  rgba(10, 10, 119, 0.5); */
+  --secondheaderbackground-color:  rgba(14, 13, 13, 0.9);
   --brand-color: white;
-  --background-color: #00002e;
-  --foreground-color: rgb(10, 10, 119);
+  /* --background-color: #00002e;
+  --foreground-color: rgb(10, 10, 119); */
+  /* --background-color: rgb(20, 20, 20);
+  --foreground-color: black; */
+  --background-color:black;
+  --foreground-color:  rgb(14, 13, 13);
+
   --content-color:  rgb(10, 10, 119);
   --primary-text-color: white;
   /* --footTop-background-color:  rgb(114, 114, 209); */
-  --footTop-background-color:  #00002e;
-  --footbuttom-background-color: rgba(138, 43, 226, 0.3);
+  /* --footTop-background-color:  #00002e;
+  --footbuttom-background-color: rgba(138, 43, 226, 0.3); */
+  --footTop-background-color:  rgba(0, 0, 46, 0.3);
+  --footbuttom-background-color: rgba(0, 0, 46, 0.3);
   --specialcontent-background-color:white;
   --specialcontent-text-color:black;
   --text-hover: blueviolet;

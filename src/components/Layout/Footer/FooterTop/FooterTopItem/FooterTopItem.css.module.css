@@ -10,7 +10,6 @@
 }
 .ItemIcons {
     margin-right: 7px;
-    color: var(--foreground-color);
 }
 
 @media (min-width:40rem) {

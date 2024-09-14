@@ -6,6 +6,7 @@ import SideDrawer from "./Header/Navigation/SideDrawer/SideDrawer";
 import { useDispatch, useSelector } from "react-redux";
 import classes from "./Layout.module.css";
 import { initTheme } from "../../store/ui/uiActions";
+import ValidAge from "../../screens/ValidAge/ValidAge";
 
 const Layout = (props) => {
   const dispatch = useDispatch();
@@ -29,6 +30,7 @@ const Layout = (props) => {
     <div data-theme={theme} className={classes.LayoutWrapper}>
       <Header toggle={toggleSide} />
       <SideDrawer show={showSideDrawer} close={closeSide} />
+      <ValidAge />
       <main className={classes.Layout}>
         <Outlet />
       </main>

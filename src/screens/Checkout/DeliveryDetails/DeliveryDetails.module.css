@@ -147,6 +147,9 @@ font-weight: 400;
   border-radius: 8px;
 }
 
+.ConfirmOrder > button:hover {
+  background-color: gray;
+}
 
 
 @media (min-width: 40rem) {

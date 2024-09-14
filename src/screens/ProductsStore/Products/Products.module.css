@@ -12,7 +12,7 @@
 .Footer_Header {
     border-radius: 10px;
     padding: 8px;
-    background-color: black;
+    background-color:var( --outdoor-background-color);
 }
 .Products_Header {
     display: flex;
