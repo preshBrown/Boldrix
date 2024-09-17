@@ -95,7 +95,7 @@ const GridInputs = (props) => {
                 <Button to="/terms-and-conditions">{props.label}</Button>
               </>
             ) : (
-              <Button to="#">{props.label}</Button>
+              <Button className={classes.CustomeLink} to="#">{props.label}</Button>
             )}
           </label>
         </div>
@@ -191,7 +191,7 @@ const GridInputs = (props) => {
             ) : null}
           </label>
           <input
-            className={inputClass.concat(classes.Input).join(" ")}
+            className={inputClass.concat(classes.InputDate).join(" ")}
             {...props.elementConfig}
             value={props.value}
             onChange={props.changed}

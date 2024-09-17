@@ -1,6 +1,6 @@
 .Layout {
-    min-height: calc(100vh - 8.19rem - 842.31px);
-    margin-top: 8.19rem;
+    min-height: calc(100vh - 3.29rem - 842.31px);
+    margin-top: 3.29rem;
     /* background-color: var(--background-color);
     transition: background-color 0.3s ease-in-out; */
 }

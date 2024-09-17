@@ -8,7 +8,7 @@ const Header = (props) => {
   return( 
   <header className={classes.Header}>
     <FIrstHeader toggle={props.toggle} />
-    <SecondHeader />
+    {/* <SecondHeader /> */}
   </header>)
 };
 

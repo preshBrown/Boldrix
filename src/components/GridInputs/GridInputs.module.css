@@ -7,6 +7,20 @@
   padding: 8px;
   font-weight: bold;
 }
+.InputDate {
+  width: 100%;
+  display: block;
+  padding: 8px 13px;
+  font-weight: bold;
+  color: var(--primary-text-color);
+
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+  transition: background-color 0.3s ease-in-out;
+}
 
 .Input,
 .Select {
@@ -29,6 +43,11 @@
   border-color: blueviolet; */
   background-color:var(--inputbackground-color);
     border-color:var(--inputborder-color);
+}
+.InputDate:focus {
+  outline: none;
+  background-color:var(--inputbackground-color);
+  border-color:var(--inputborder-color);
 }
 
 .Textarea {
@@ -56,8 +75,8 @@ input[type="checkbox"] {
     appearance: none;
 }
 input[type="checkbox"]:checked {
-    border-color: #00002e;
-    background-color: blueviolet;
+    border-color: white;
+    background-color:  #00002e;
 }
 .Relative {
     position: relative;
@@ -71,6 +90,13 @@ input[type="checkbox"]:checked {
 
   .Icon {
     vertical-align: middle;
+  }
+
+  .CustomeLink {
+    color: black;
+  }
+  .CustomeLink :hover {
+    color: black;
   }
   /* .Input,
   .Textarea, */
