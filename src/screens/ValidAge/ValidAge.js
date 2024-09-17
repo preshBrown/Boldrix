@@ -28,7 +28,7 @@ const ValidAge = () => {
           <p>
             To visit our website, you must be of legal drinking/purchasing age
             in your location of residence. If there is no legal age for
-            consuming alcohol in your location, you must be over 21.
+            consuming liquor in your location, you must be over 21.
           </p>
         </header>
 
