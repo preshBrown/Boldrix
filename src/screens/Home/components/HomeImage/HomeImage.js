@@ -39,7 +39,7 @@ const HomeImage = (props) => {
   // };
 
   useEffect(() => {
-    const interval = setInterval(showNextImage, 5000);
+    const interval = setInterval(showNextImage, imageIndex !==2 ? 20000 : 5000);
     return () => clearInterval(interval);
   });
 
@@ -92,7 +92,7 @@ const HomeImage = (props) => {
       <div
         style={{
           position: "absolute",
-          bottom: ".5rem",
+          bottom: "1rem",
           left: "50%",
           translate: "-50%",
           display: "flex",

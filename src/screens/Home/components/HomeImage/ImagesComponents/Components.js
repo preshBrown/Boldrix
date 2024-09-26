@@ -1,4 +1,6 @@
 import React from "react";
+import BoldrixAction from "../../../../../images/GIN_COCKTAIL_B_ROLL(1080p).mp4"
+import BoldrixAction2 from "../../../../../images/RED_WINE_ADS(1080p60).mp4"
 
 import imageOneClasses from "./ImageOne.module.css";
 import imageTwoClasses from "./ImageTwo.module.css";
@@ -8,11 +10,11 @@ const ComponentOne = (props) => {
   console.log("1-MOUNTED");
 
   return (
-    <div
-      style={{ translate: props.translate }}
-      className={imageOneClasses.ImageOne}
+    <div style={{ translate: props.translate }}
+        className={imageOneClasses.ImageOne} 
     >
-   { props.index &&     <div
+      <video className={imageOneClasses.VidIntro} src={BoldrixAction} autoPlay muted loop />
+      { props.index &&     <div
         className={`${imageOneClasses.ImageOneChild} ${imageOneClasses.Open}`}
       >
         <h4 className={imageOneClasses.head}>FEEL.</h4>
@@ -22,31 +24,73 @@ const ComponentOne = (props) => {
         </small>
         <button>Get Started</button>
       </div>}
+
     </div>
+
+
+  //   <div
+  //     style={{ translate: props.translate }}
+  //     className={imageOneClasses.ImageOne}
+  //   >
+  //  { props.index &&     <div
+  //       className={`${imageOneClasses.ImageOneChild} ${imageOneClasses.Open}`}
+  //     >
+  //       <h4 className={imageOneClasses.head}>FEEL.</h4>
+  //       <small>Experience the Bold Taste of Boldrix.</small>
+  //       <small className={imageOneClasses.hide}>
+  //         Refreshingly Bold, Uniquely You.{" "}
+  //       </small>
+  //       <button>Get Started</button>
+  //     </div>}
+  //   </div>
   );
 };
+
+
+
 
 const ComponentTwo = (props) => {
   console.log("2-MOUNTED");
 
   return (
     <div
-      style={{ translate: props.translate }}
-      className={imageTwoClasses.ImageTwo}
+    style={{ translate: props.translate }}
+    className={imageTwoClasses.ImageTwo}
+  >
+          <video className={imageTwoClasses.VidIntro} src={BoldrixAction2} autoPlay muted loop />
+   { props.index &&   <div
+      className={`${imageTwoClasses.ImageTwoChild} ${imageTwoClasses.Open}`}
     >
-     { props.index &&   <div
-        className={`${imageTwoClasses.ImageTwoChild} ${imageTwoClasses.Open}`}
-      >
-        <h4>Quench Your Thirst.</h4>
-        <small>Stay Cool With Every Sip Of Boldrix.</small><br /> 
-        <small className={imageTwoClasses.hide}>
-          Indulge in the rich, bold flavors that make every gathering unforgettable. {" "}
-        </small>
-        {/* <button>Get Started</button> */}
-      </div>}
-    </div>
+      <h4>Quench Your Thirst.</h4>
+      <small>Stay Cool With Every Sip Of Boldrix.</small><br /> 
+      <small className={imageTwoClasses.hide}>
+        Indulge in the rich, bold flavors that make every gathering unforgettable. {" "}
+      </small>
+      {/* <button>Get Started</button> */}
+    </div>}
+  </div>
+
+
+    // <div
+    //   style={{ translate: props.translate }}
+    //   className={imageTwoClasses.ImageTwo}
+    // >
+    //  { props.index &&   <div
+    //     className={`${imageTwoClasses.ImageTwoChild} ${imageTwoClasses.Open}`}
+    //   >
+    //     <h4>Quench Your Thirst.</h4>
+    //     <small>Stay Cool With Every Sip Of Boldrix.</small><br /> 
+    //     <small className={imageTwoClasses.hide}>
+    //       Indulge in the rich, bold flavors that make every gathering unforgettable. {" "}
+    //     </small>
+    //     {/* <button>Get Started</button> */}
+    //   </div>}
+    // </div>
   );
 };
+
+
+
 
 const ComponentThree = (props) => {
 

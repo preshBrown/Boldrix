@@ -40,7 +40,7 @@
   }
   .FaqInfo.Open > .FaqInfoDescription {
         padding: 15px;
-    height: auto;
+        height: auto;
   }
   
   /* .FaqInfoDescription > p {

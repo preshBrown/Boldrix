@@ -36,6 +36,9 @@ const Details = (props) => {
   const error = useSelector((state) => state.dc.error);
 
   const [openComments, setOpenComments] = useState(false);
+  const [images, setImages] = useState();
+  const [imagesIndex, setImagesIndex] = useState(0);
+
   const navigate = useNavigate();
 
   const prodId = useParams().prodId;
@@ -57,7 +60,7 @@ const Details = (props) => {
     const day = date.getDate();
     const month = date.getMonth() + 1;
     const year = date.getFullYear();
-    
+
     const orderDate = new Date(`${year}-${month}-${day}`);
 
     const addDays = (date, days) => {
@@ -69,7 +72,12 @@ const Details = (props) => {
     const deliveryStartDate = addDays(orderDate, 4);
     const deliveryEndDate = addDays(orderDate, 9);
 
-    const options = {weekday:"long", year: "numeric", month: "short", day: "numeric" };
+    const options = {
+      weekday: "long",
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    };
     const formattedStartDate = deliveryStartDate.toLocaleDateString(
       "en-GB",
       options
@@ -100,19 +108,39 @@ const Details = (props) => {
   };
 
   let detail = (
-    <div style={{paddingTop: "150px", paddingBottom: "150px"}}>
-    <Spinner />
-  </div> 
+    <div style={{ paddingTop: "150px", paddingBottom: "150px" }}>
+      <Spinner />
+    </div>
   );
 
-  if (!loading && product)
+  if (!loading && product) {
+    const prodImages = [product.image1, product.image2];
+    // setImages(prodImages);
+
     detail = (
       <>
         <section>
           <div className={classes.Details}>
             <div className={classes.DetailsImgWrapper}>
               <div className={classes.DetailsImgContainer}>
-                <img src={product.image1} alt="Details" />
+                <img
+                  src={ prodImages[imagesIndex]}
+                  alt="Details"
+                />
+              </div>
+
+              <div className={`${classes.imgToggleContainer}`}>
+                {prodImages.map((images, index) => (
+                  <div
+                    className={`${classes.imgToggleItem} ${
+                      imagesIndex === index ? classes.Active : ""
+                    }`}
+                    key={images + index}
+                    onClick={() => setImagesIndex(index)}
+                  >
+                    <img src={images} alt="ProductImag" />
+                  </div>
+                ))}
               </div>
               <h4>{product.brandSummary}</h4>
               <h5>{product.descriptionSummary}</h5>
@@ -176,9 +204,13 @@ const Details = (props) => {
         </section>
 
         <section style={{ marginBottom: "35px" }}>
-          <AddToCart deliveryStartDate={deliveryStartDate}
-           deliveryEndDate={deliveryEndDate}
-           initialPrice={product.initialPrice} price={product.price} id={prodId} />
+          <AddToCart
+            deliveryStartDate={deliveryStartDate}
+            deliveryEndDate={deliveryEndDate}
+            initialPrice={product.initialPrice}
+            price={product.price}
+            id={prodId}
+          />
         </section>
 
         <section>
@@ -212,6 +244,7 @@ const Details = (props) => {
         <Category />
       </>
     );
+  }
 
   return detail;
 };
