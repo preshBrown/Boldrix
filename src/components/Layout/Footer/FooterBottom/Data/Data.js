@@ -57,27 +57,50 @@ export const paymentMethods = [
 ];
 
 export const socialHandleLinks = [
+  // {
+  //   name: "telegram",
+  //   icon: <FaTelegramPlane style={{ color: "#0088cc" }} size={25} />,
+  // },
+  // {
+  //   name: "x",
+  //   icon: <FaXTwitter style={{ color: "rgb(20, 23, 26)" }} size={25} />,
+  // },
+
+  // {
+  //   name: "facebook",
+  //   icon: <FaFacebookF style={{ color: "rgb(66, 103, 178)" }} size={25} />,
+  // },
+  // {
+  //   name: "instagram",
+  //   icon: (
+  //     <FaSquareInstagram style={{ color: "rgb(205, 72, 107)" }} size={25} />
+  //   ),
+  // },
+  // {
+  //   name: "linkedin",
+  //   icon: <FaLinkedinIn style={{ color: "rgb(0, 119, 181)" }} size={25} />,
+  // },
   {
     name: "telegram",
-    icon: <FaTelegramPlane style={{ color: "#0088cc" }} size={25} />,
+    icon: <FaTelegramPlane size={20} />,
   },
   {
     name: "x",
-    icon: <FaXTwitter style={{ color: "rgb(20, 23, 26)" }} size={25} />,
+    icon: <FaXTwitter size={20} />,
   },
 
   {
     name: "facebook",
-    icon: <FaFacebookF style={{ color: "rgb(66, 103, 178)" }} size={25} />,
+    icon: <FaFacebookF size={20} />,
   },
   {
     name: "instagram",
     icon: (
-      <FaSquareInstagram style={{ color: "rgb(205, 72, 107)" }} size={25} />
+      <FaSquareInstagram size={20} />
     ),
   },
   {
     name: "linkedin",
-    icon: <FaLinkedinIn style={{ color: "rgb(0, 119, 181)" }} size={25} />,
+    icon: <FaLinkedinIn size={20} />,
   },
 ];

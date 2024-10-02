@@ -29,8 +29,8 @@ body {
   --primary-text-color: black;
   /* --footTop-background-color: #ccc; */
   /* --footbuttom-background-color: rgba(10, 10, 119, 0.5); */
-  --footTop-background-color: rgba(0, 0, 46, 0.3);
-  --footbuttom-background-color:  rgba(0, 0, 46, 0.3);
+  --footTop-background-color: rgba(0, 0, 46, 0.2);
+  --footbuttom-background-color:  rgba(0, 0, 46, 0.2);
   --specialcontent-background-color:grey;
   --specialcontent-text-color:white;
   --text-hover: blueviolet;

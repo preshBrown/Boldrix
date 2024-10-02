@@ -1,9 +1,10 @@
 .SocialHandleList {
-    padding: 4px 5px;
+    padding: 5px 5px;
+    color: var(--primary-text-color);
 }
 
 .SocialHandleList:hover {
-    background-color: black;
+    background-color: var(--foreground-color);
     border-radius: 50%;
 }
 

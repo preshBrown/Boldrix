@@ -41,7 +41,7 @@ const SideDrawer = (props) => {
             <IoCloseOutline size={20} />
           </span>
         </div>
-        <div className={classes.SideNavItems}>
+        <div onClick={props.close} className={classes.SideNavItems}>
           <SideNavItems />
         </div>
 

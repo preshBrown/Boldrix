@@ -14,13 +14,13 @@ const FooterBottom = () => {
         </div>
 
         <div className={classes.FooterBottomContainer}>
-          <section>
+          {/* <section>
             <PaymentMethods />
             <small>Payment options will vary by merchant</small>
           </section>
           <section style={{ width: "100%" }}>
             <DownloadLinks />
-          </section>
+          </section> */}
           <section>
             <SocialHandle />
           </section>
