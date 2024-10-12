@@ -3,6 +3,7 @@ import productStoreSlice from "./productStore/productStoreSlice";
 import ordersSlice from "./orders/ordersSlice";
 import uiSliceReducer from "./ui/uiSlice";
 import DetailsAndCartReducer from "./DetailsAndCart/detailAndCartSlice";
+import signupSlice from "./Auth/signupSlice";
 import { configureStore } from "@reduxjs/toolkit";
 
 const store = configureStore({
@@ -11,7 +12,8 @@ const store = configureStore({
     ui: uiSliceReducer,
     dc: DetailsAndCartReducer,
     orders: ordersSlice,
-    pStore: productStoreSlice
+    pStore: productStoreSlice,
+    signUp: signupSlice
   },
 });
 

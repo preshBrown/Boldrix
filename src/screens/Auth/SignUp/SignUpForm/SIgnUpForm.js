@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import GridInputs from "../../../../components/GridInputs/GridInputs";
 import Button from "../../../../components/Interfaces/Button/Button";
 import classes from "./SIgnUpForm.module.css";
@@ -6,8 +6,17 @@ import {
   updateObject,
   checkValidation,
 } from "../../../../components/Utility/FormUtility/FormUtility";
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { signUp } from "../../../../store/Auth/signupActions";
+import Spinner from "../../../../components/Interfaces/Spinner/Spinner";
 
 const SignUpForm = (props) => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const isSignedUp = useSelector((state) => state.signUp.isSignedUp);
+  const loading = useSelector((state) => state.signUp.loading);
+  console.log("🚀 ~ SignUpForm ~ isSignedUp:", isSignedUp);
   const [formInfo, setFormInfo] = useState({
     // paymentMethod: {
     //   elementType: "select",
@@ -161,7 +170,21 @@ const SignUpForm = (props) => {
   });
   const [formIsValid, setFormIsValid] = useState(false);
   const [confirmPass, setConfirmPass] = useState("");
-  const [loading, setLoading] = useState(false);
+  // const [succesMessage, setSuccesMessage] = useState("");
+
+
+
+  useEffect(() => {
+    if (isSignedUp ){ 
+      setTimeout(() => {
+        // setSuccesMessage("")
+        navigate("/login")
+
+ 
+      }, 1000)
+    }
+
+  })
 
   const toggleVisibility = (visibilityType) => {
     console.log(visibilityType);
@@ -181,8 +204,64 @@ const SignUpForm = (props) => {
 
     setFormInfo(originalForm);
   };
-  const submitHandler = (e) => {
+
+  const submitHandler = async (e) => {
     e.preventDefault();
+
+    const formData = {
+      name: formInfo.fullName.value,
+      email: formInfo.email.value,
+      password: formInfo.password.value,
+      image: formInfo.image.value,
+      contact: formInfo.contact.value,
+      country: formInfo.country.value,
+      bio: formInfo.bio.value,
+    };
+    // for (let key in formInfo) {
+    //   outPut[key] = formInfo[key].value;
+    //   console.log(`outPut Before Reset: ${[key]} : ${formInfo[key].value}`);
+    // }
+
+    dispatch(signUp(formData));
+
+    // if (isSignedUp) {
+    //   const originalForm = {
+    //     ...formInfo,
+    //   };
+
+    //   for (let key in originalForm) {
+    //     originalForm[key].valid = key === "paymentMethod" ? true : false;
+    //     originalForm[key].value =
+    //       key === "paymentMethod"
+    //         ? "Master"
+    //         : key === "termsAndCondition"
+    //         ? "Agreed"
+    //         : "";
+    //     originalForm[key].touched = false;
+    //     originalForm[key].hide = false;
+    //     originalForm[key].validation.isChecked = false;
+    //     if (key === "password" || key === "ConfirmPassword") {
+    //       originalForm[key].elementConfig.type = "password";
+    //     }
+    //   }
+    //   // originalForm.paymentMethod.value = "Master";
+    //   // originalForm.paymentMethod.valid = true;
+    //   // originalForm.termsAndCondition.value = "Agreed";
+    //   // originalForm.password.elementConfig.type = "password";
+    //   // originalForm.ConfirmPassword.elementConfig.type = "password";
+
+    //   console.log(
+    //     "ischeckedDetails " +
+    //       originalForm.termsAndCondition.validation.isChecked
+    //   );
+    //   setFormInfo(originalForm);
+    //   setFormIsValid(false);
+    //   const data = {};
+    //   for (let key in formInfo) {
+    //     data[key] = formInfo[key].value;
+    //     console.log(`${[key]} : ${formInfo[key].value}`);
+    //   }
+    // }
   };
 
   const setImage = (id, file, valid) => {
@@ -281,7 +360,7 @@ const SignUpForm = (props) => {
     });
   }
 
-  let form = (
+let form = (
     <div className={classes.SignUpForm}>
       <h2 className={classes["form-title__"]}>Create Account</h2>
       <form id={classes["form__wrapper"]} onSubmit={submitHandler}>
@@ -310,13 +389,15 @@ const SignUpForm = (props) => {
         ))}
 
         <div className={classes["button-Grid"]}>
-          <Button W-100 type="submit" disabled={!formIsValid}>
+        { loading ? <Spinner /> : <Button W-100 type="submit" disabled={!formIsValid}>
             Sign Up
-          </Button>
+          </Button>}
         </div>
       </form>
+      {isSignedUp ? <small>Logged in success</small> : ""}
     </div>
   );
+
 
   if (
     formInfo.password.valid &&
@@ -351,8 +432,11 @@ const SignUpForm = (props) => {
     setFormInfo(originalForm);
     setFormIsValid(valid);
   }
-
-  return <section className={classes.SignUpFormContainer}>{form}</section>;
+  return (
+    <>
+      <section className={classes.SignUpFormContainer}>{form}</section>
+    </>
+  );
 };
 
 export default SignUpForm;
