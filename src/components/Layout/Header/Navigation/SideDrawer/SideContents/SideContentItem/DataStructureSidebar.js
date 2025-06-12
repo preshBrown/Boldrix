@@ -14,8 +14,13 @@ import { CiLight } from "react-icons/ci";
 import { BiSupport } from "react-icons/bi";
 import { AiFillBug, AiOutlineLogout } from "react-icons/ai";
 import { FaLanguage } from "react-icons/fa6";
+import { useSelector } from "react-redux";
+
+// const getUserId = () => {
+//   const userId = useSelector((state) => state.logIn.userId);
 
 
+// }
 const DataStructureSidebar = [
   {
     title: "General",

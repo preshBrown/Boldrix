@@ -1,10 +1,26 @@
-import React, { useState } from "react";
-import { checkValidation, updateObject } from "../../../../components/Utility/FormUtility/FormUtility";
+import React, { useEffect, useState } from "react";
+import {
+  checkValidation,
+  updateObject,
+} from "../../../../components/Utility/FormUtility/FormUtility";
 import Button from "../../../../components/Interfaces/Button/Button";
 import classes from "./LogInForm.module.css";
 import GridInputs from "../../../../components/GridInputs/GridInputs";
+import { useDispatch, useSelector } from "react-redux";
+import { closeError, logIn } from "../../../../store/Auth/loginActions";
+import { useNavigate } from "react-router-dom";
+import Spinner from "../../../../components/Interfaces/Spinner/Spinner";
+import ErrorModal from "../../../../components/Interfaces/ErrorModal/ErrorModal";
 
 const LogInForm = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const isLoggedIn = useSelector((state) => state.logIn.isLoggedIn);
+  const loading = useSelector((state) => state.logIn.loading);
+  const message = useSelector((state) => state.logIn.message);
+  const error = useSelector((state) => state.logIn.error);
+  console.log("🚀 ~ LogInForm ~ error:", error)
+
   const [formInfo, setFormInfo] = useState({
     email: {
       elementType: "input",
@@ -16,7 +32,7 @@ const LogInForm = () => {
       },
       label: "Email",
       value: "",
-      validation: { required: true, isEmail: true},
+      validation: { required: true, isEmail: true },
       valid: false,
       touched: false,
     },
@@ -33,12 +49,18 @@ const LogInForm = () => {
       hide: false,
       label: "Password",
       value: "",
-      validation: { required: true, },
+      validation: { required: true },
       valid: false,
       touched: false,
     },
   });
   const [formIsValid, setFormIsValid] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (isLoggedIn) navigate("/");
+    }, 1500)
+  });
 
   const toggleVisibility = (visibilityType) => {
     console.log(visibilityType);
@@ -61,11 +83,16 @@ const LogInForm = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
+
+    const formData = {
+      email: formInfo.email.value,
+      password: formInfo.password.value,
+    };
+    dispatch(logIn(formData));
   };
 
   const inputHandler = (event, identi) => {
-
-   const cloneForm = { ...formInfo };
+    const cloneForm = { ...formInfo };
 
     const updated = updateObject(cloneForm[identi], {
       validation: updateObject(cloneForm[identi].validation, {
@@ -79,15 +106,10 @@ const LogInForm = () => {
             identi === "recaptcha"
           ? event
           : event.target.value,
-          touched: identi === "email" ? true : false
+      touched: identi === "email" ? true : false,
     });
 
-
-    updated.valid = checkValidation(
-      updated.value,
-      updated.validation,
-       null
-    );
+    updated.valid = checkValidation(updated.value, updated.validation, null);
 
     const originalForm = updateObject(cloneForm, {
       [identi]: updated,
@@ -97,11 +119,14 @@ const LogInForm = () => {
     for (let key in originalForm) {
       valid = originalForm[key].valid && valid;
     }
-    
+
     setFormInfo(originalForm);
     setFormIsValid(valid);
   };
 
+  const closeErrorModal = () => {
+    dispatch(closeError())
+  }
 
   const formElements = [];
   for (let key in formInfo) {
@@ -113,6 +138,7 @@ const LogInForm = () => {
 
   let form = (
     <>
+    {!!message && <small>{message}</small>}
       <h3 className={classes["form-title__"]}>Login</h3>
       <form id={classes["form__wrapper"]} onSubmit={submitHandler}>
         {formElements.map((fm) => (
@@ -138,19 +164,26 @@ const LogInForm = () => {
         ))}
 
         <div className={classes["button-Grid"]}>
-            <small><Button to="/forgot-password">Forgot Password?</Button></small>
+          <small>
+            <Button to="/forgot-password">Forgot Password?</Button>
+          </small>
           <div>
             <Button W-100 type="submit" disabled={!formIsValid}>
               Login
             </Button>
-            <Button className={classes.SignUpBtn} StyleSuccess to="/signup">SignUp</Button>
+            <Button className={classes.SignUpBtn} StyleSuccess to="/signup">
+              SignUp
+            </Button>
           </div>
         </div>
       </form>
     </>
   );
+  if (loading) form = <div style={{ paddingTop: "140px", paddingBottom: "140px" }}><Spinner /></div>;
 
-  return <div className={classes.LogInForm}>{form}</div>;
+  return <div className={classes.LogInForm}>
+    <ErrorModal errorMessage={error} error={error} close={closeErrorModal.bind()} />
+    {form}</div>;
 };
 
 export default LogInForm;

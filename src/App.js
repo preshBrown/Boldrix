@@ -25,12 +25,37 @@ import ForgotPassword from "./screens/Auth/ForgotPassword/ForgotPassword";
 import ResetPassword from "./screens/Auth/ResetPassword/ResetPassword";
 import Profile from "./screens/Auth/Profile/Profile";
 import Orders from "./screens/Orders/Orders";
+import { checkAuth, logout } from "./store/Auth/loginActions";
 
+let logoutTimer;
 
 function App() {
-
   const dispatch = useDispatch();
+
   const theme = useSelector((state) => state.ui.theme);
+  const token = useSelector((state) => state.logIn.token);
+
+  const tokenUiExpirationDate = useSelector(
+    (state) => state.logIn.tokenUiExpirationDate
+  );
+
+  useEffect(() => {
+    if (token && tokenUiExpirationDate) {
+      console.log("🚀 ~ useEffect ~ tokenUiExpirationDate:", tokenUiExpirationDate)
+      const remainingTime =
+        tokenUiExpirationDate.getTime() - new Date().getTime();
+
+      logoutTimer = setTimeout(() => {
+        dispatch(logout());
+      }, remainingTime);
+    } else {
+      clearTimeout(logoutTimer);
+    }
+  }, [token, tokenUiExpirationDate, dispatch]);
+
+  useEffect(() => {
+    dispatch(checkAuth());
+  },[dispatch]);
 
   const preference = window.matchMedia("(prefers-color-scheme: dark)").matches;
   const selectedTheme = localStorage.getItem("Theme");
@@ -40,7 +65,6 @@ function App() {
   const userConsent = localStorage.getItem("userConsent");
   if (userConsent === "true") dispatch(onIsValidAge());
 
-  
 
   return (
     <Routes>
@@ -53,7 +77,7 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
         <Route path="/products" element={<ProductsStore />} />
-        <Route path="/products/:prodId" element={<Details />} >
+        <Route path="/products/:prodId" element={<Details />}>
           <Route path="comments" element={<Comments />} />
           <Route path="user-comment" element={<UserComment />} />
         </Route>
@@ -63,11 +87,11 @@ function App() {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/orders" element={<Orders />} />
 
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile/:userId" element={<Profile />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route path="/reset-password/reset" element={<ResetPassword />} />
+        <Route path="/reset-password/:userId/:token" element={<ResetPassword />} />
 
         <Route path="*" element={<ErrorPage />} />
       </Route>

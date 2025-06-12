@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   checkValidation,
   updateObject,
@@ -7,9 +7,19 @@ import {
 import classes from "./ResetPassword.module.css";
 import GridInputs from "../../../components/GridInputs/GridInputs";
 import Button from "../../../components/Interfaces/Button/Button";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { closeUserError, onResetPassword } from "../../../store/user/userActions";
+import { useDispatch, useSelector } from "react-redux";
+import ErrorModal from "../../../components/Interfaces/ErrorModal/ErrorModal";
+import Spinner from "../../../components/Interfaces/Spinner/Spinner";
 
 const ResetPassword = () => {
+  const { userId, token } = useParams();
+  const dispatch = useDispatch();
+  const loading = useSelector((state) => state.user.loading);
+  const message = useSelector((state) => state.user.message);
+  const error = useSelector((state) => state.user.error);
+
   const [formInfo, setFormInfo] = useState({
     password: {
       elementType: "input",
@@ -46,10 +56,16 @@ const ResetPassword = () => {
       touched: false,
     },
   });
+  
   const [formIsValid, setFormIsValid] = useState(false);
   const [confirmPass, setConfirmPass] = useState("");
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // console.log("🚀 ~ ResetPassword ~ message:", message)
+if (message === "Successful") navigate("/login");
+  });
 
   const toggleVisibility = (visibilityType) => {
     console.log(visibilityType);
@@ -72,7 +88,13 @@ const ResetPassword = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    navigate("/");
+      const form = {...formInfo}
+
+
+    const password = { password: form.password.value }
+    // const encodedToken = encodeURIComponent(token)
+
+    dispatch(onResetPassword(userId, token, password));
   };
 
   const inputHandler = (event, identi) => {
@@ -120,6 +142,10 @@ const ResetPassword = () => {
     setFormIsValid(valid);
   };
 
+  const closeErrorModal = () => {
+    dispatch(closeUserError());
+  };
+
   const formElements = [];
   for (let key in formInfo) {
     formElements.push({
@@ -155,13 +181,20 @@ const ResetPassword = () => {
         ))}
 
         <div className={classes["button-Grid"]}>
-            <Button W-100 type="submit" disabled={!formIsValid}>
-              Reset
-            </Button>
+          <Button W-100 type="submit" disabled={!formIsValid}>
+            Reset
+          </Button>
         </div>
       </form>
     </div>
   );
+  if (loading)
+  form = (
+    <div style={{ paddingTop: "140px", paddingBottom: "140px" }}>
+      <Spinner />
+    </div>
+  );
+
 
   if (
     formInfo.password.valid &&
@@ -197,7 +230,14 @@ const ResetPassword = () => {
     setFormIsValid(valid);
   }
 
-  return <section className={classes.ResetPasswordContainer}>{form}</section>;
+  return <section className={classes.ResetPasswordContainer}>
+     <ErrorModal
+        errorMessage={error}
+        error={error}
+        close={closeErrorModal.bind()}
+      />
+    {form}
+    </section>;
 };
 
 export default ResetPassword;

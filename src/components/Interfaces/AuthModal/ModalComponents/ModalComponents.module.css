@@ -34,7 +34,7 @@ a.active {
 
 .LogoutBtn {
     background-color: transparent;
-    color: var(--primary-text-color);
+    color: white;
     font-weight: bold;
     border: none;
 

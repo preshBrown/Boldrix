@@ -8,14 +8,20 @@ import {
 } from "../../../../components/Utility/FormUtility/FormUtility";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { signUp } from "../../../../store/Auth/signupActions";
+import {
+  onCloseSignUpError,
+  onResetIsSignedUp,
+  signUp,
+} from "../../../../store/Auth/signupActions";
 import Spinner from "../../../../components/Interfaces/Spinner/Spinner";
+import ErrorModal from "../../../../components/Interfaces/ErrorModal/ErrorModal";
 
 const SignUpForm = (props) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const isSignedUp = useSelector((state) => state.signUp.isSignedUp);
   const loading = useSelector((state) => state.signUp.loading);
+  const error = useSelector((state) => state.signUp.error);
   console.log("🚀 ~ SignUpForm ~ isSignedUp:", isSignedUp);
   const [formInfo, setFormInfo] = useState({
     // paymentMethod: {
@@ -172,19 +178,14 @@ const SignUpForm = (props) => {
   const [confirmPass, setConfirmPass] = useState("");
   // const [succesMessage, setSuccesMessage] = useState("");
 
-
-
   useEffect(() => {
-    if (isSignedUp ){ 
-      setTimeout(() => {
-        // setSuccesMessage("")
-        navigate("/login")
+    if (isSignedUp) {
+      // setSuccesMessage("")
+      navigate("/login");
 
- 
-      }, 1000)
+      return () => dispatch(onResetIsSignedUp());
     }
-
-  })
+  });
 
   const toggleVisibility = (visibilityType) => {
     console.log(visibilityType);
@@ -223,45 +224,6 @@ const SignUpForm = (props) => {
     // }
 
     dispatch(signUp(formData));
-
-    // if (isSignedUp) {
-    //   const originalForm = {
-    //     ...formInfo,
-    //   };
-
-    //   for (let key in originalForm) {
-    //     originalForm[key].valid = key === "paymentMethod" ? true : false;
-    //     originalForm[key].value =
-    //       key === "paymentMethod"
-    //         ? "Master"
-    //         : key === "termsAndCondition"
-    //         ? "Agreed"
-    //         : "";
-    //     originalForm[key].touched = false;
-    //     originalForm[key].hide = false;
-    //     originalForm[key].validation.isChecked = false;
-    //     if (key === "password" || key === "ConfirmPassword") {
-    //       originalForm[key].elementConfig.type = "password";
-    //     }
-    //   }
-    //   // originalForm.paymentMethod.value = "Master";
-    //   // originalForm.paymentMethod.valid = true;
-    //   // originalForm.termsAndCondition.value = "Agreed";
-    //   // originalForm.password.elementConfig.type = "password";
-    //   // originalForm.ConfirmPassword.elementConfig.type = "password";
-
-    //   console.log(
-    //     "ischeckedDetails " +
-    //       originalForm.termsAndCondition.validation.isChecked
-    //   );
-    //   setFormInfo(originalForm);
-    //   setFormIsValid(false);
-    //   const data = {};
-    //   for (let key in formInfo) {
-    //     data[key] = formInfo[key].value;
-    //     console.log(`${[key]} : ${formInfo[key].value}`);
-    //   }
-    // }
   };
 
   const setImage = (id, file, valid) => {
@@ -352,6 +314,10 @@ const SignUpForm = (props) => {
     setFormIsValid(valid);
   };
 
+  const closeErrorModal = () => {
+    dispatch(onCloseSignUpError());
+  };
+
   const formElements = [];
   for (let key in formInfo) {
     formElements.push({
@@ -360,7 +326,7 @@ const SignUpForm = (props) => {
     });
   }
 
-let form = (
+  let form = (
     <div className={classes.SignUpForm}>
       <h2 className={classes["form-title__"]}>Create Account</h2>
       <form id={classes["form__wrapper"]} onSubmit={submitHandler}>
@@ -389,15 +355,19 @@ let form = (
         ))}
 
         <div className={classes["button-Grid"]}>
-        { loading ? <Spinner /> : <Button W-100 type="submit" disabled={!formIsValid}>
-            Sign Up
-          </Button>}
+          {loading ? (
+            <Spinner />
+          ) : (
+            <Button W-100 type="submit" disabled={!formIsValid}>
+              Sign Up
+            </Button>
+          )}
+          {isSignedUp && <p> Logged in successful</p>}
         </div>
       </form>
-      {isSignedUp ? <small>Logged in success</small> : ""}
+      {isSignedUp ? <small>Sign Up Successful, Please Loggin</small> : ""}
     </div>
   );
-
 
   if (
     formInfo.password.valid &&
@@ -432,9 +402,17 @@ let form = (
     setFormInfo(originalForm);
     setFormIsValid(valid);
   }
+
   return (
     <>
-      <section className={classes.SignUpFormContainer}>{form}</section>
+      <section className={classes.SignUpFormContainer}>
+        <ErrorModal
+          errorMessage={error}
+          error={error}
+          close={closeErrorModal.bind()}
+        />
+        {form}
+      </section>
     </>
   );
 };
